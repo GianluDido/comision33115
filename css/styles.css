@@ -1,0 +1,439 @@
+*{
+
+    padding: 0;
+    margin: 0;}  
+
+html {    
+   font-size: 62.5%; /*1rem = 10px*/
+   background-image: url(../img/prism.png) ;    
+   font-family: 'Calibri';
+   background-blend-mode:hard-light;
+   background-color: #119cd367;
+    }
+
+img{
+    max-width: 100%;
+}
+
+
+
+
+/*                        NAV*                       */
+
+.nav {
+    grid-area: nav;
+}
+   
+
+.logo {
+    grid-area: logo;
+    width: 65%;
+    margin: 0.5rem 0rem;
+    }
+
+
+
+#menu {
+    display: grid;
+    grid-template-areas: 
+    "none logo nav ingresar";   
+    grid-template-columns: 2fr 2fr 10fr 2fr  ;
+    border: solid #1cb056 0.2rem;
+    background-color: #161616;
+    justify-items: center;
+    align-items: center;
+    }
+
+ #menu ul {
+    display: flex;
+    list-style: none;
+    }
+
+ #menu ul li a {
+    color: #1cb056;
+    text-decoration: none;
+    display: block;
+    padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+    font-size: 2.2rem;
+    margin: 0rem 0.6rem;
+    }
+
+ #menu ul li a:hover {
+    color: #119cd3;
+    /*background-color:rgb(88, 88, 88);*/
+    }
+
+
+
+.ingresar  {         /*  BOTON INGRESAR EN NAV     */
+    grid-area: ingresar;
+    font-size: 2.2rem;
+    margin: 0rem 0.6rem;
+    }
+
+.ingresar a {
+    text-decoration: none;
+    color: #1cb056;
+    padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+    }
+
+.ingresar a:hover {
+    color: #119cd3;
+
+    }
+
+
+
+#form_section {
+    margin-top: 18rem;
+    display: grid;
+    grid-template-areas: 
+    "none form none"
+    }
+    
+.form {               /*  DIV DEL FORM    */
+    grid-area: form;
+    width: 50rem;
+    height: 40rem;
+    border: solid #1cb056 .2rem;
+    background-color: #1d363f;
+    border-radius: 2rem;
+    }
+    
+.form form {           /*  FORMULARIO    */
+ display: flex;
+ flex-direction: column;
+ row-gap: .7rem;
+ align-items: center;
+    }
+
+.form p {              /*  INICIAR SESION     */
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0rem;     
+    color: #158140;
+    font-weight: bolder;
+    }
+    
+.form input{            /*  INGRESAR DATOS, FORM     */
+    width: 90%;
+    padding: 1rem;
+    background:none;
+    font-size: 2rem;
+    border: solid;
+    border-color:  rgb(88, 158, 141);
+    border-radius: .7rem;
+    color: #119cd3;
+  
+    }
+    
+#enviarForm {            /*  BOTON INGRESAR     */
+    margin-top: 1.4rem;
+    background-color: #0b6285;
+    border: hidden;
+    color: black;
+    }
+
+
+
+
+
+
+/*                      INDEX / HOME                       */
+
+.eslogan {
+   display: grid;
+   grid-template-areas: 
+   "nombre imagen"
+   "eslogan imagen";
+   grid-template-rows:  0.1fr 1fr;
+   background-color: rgba(0, 0, 0, 0.247);
+   padding: 5rem 0rem;
+
+}
+
+.eslogan h1 {                       /*GemGym */
+    font-size: 6rem;
+    color: #1cb056;
+    grid-area: nombre;
+    margin-left:  3rem;
+        }
+
+.eslogan h2 {                       /*Encontramos tu valor*/
+    font-size: 4rem;
+    color: #119cd3;
+    grid-area: eslogan;
+    margin-left: 6rem;
+    }
+
+ .eslogan img {                       /*frase motivadora*/
+    border: solid 0.2rem #1cb056;
+    grid-area: imagen;
+    }
+
+
+
+.index_hr{
+    padding: 0.1rem;
+    background-color: #1cb056;
+    margin: 0rem 50rem;
+    }
+
+
+.descripcion_p {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem 30rem;
+    text-align: center;
+    gap: 5em;
+    }
+
+.descripcion_p1 {                     /*parrafo largo abajo de la imagen*/
+    font-size: 2.5rem;
+    }
+
+.descripcion_p2 {                      /*parrafo para inscribirse*/
+    font-size: 2.2rem;
+    font-weight: bolder;
+    }
+
+.descripcion_img {
+    margin-top: 10rem;
+    display: grid ;
+    grid-template-columns: 10fr 10fr 10fr;
+    grid-template-rows: 9fr 1fr;
+    justify-items: center;
+    row-gap: 1rem;
+}
+
+.descripcion_img img {                /*imagenes de los sectores*/
+    width: 51rem;
+    height: 32rem;
+    display: inline;
+    border: solid 0.2rem black;
+
+    }
+.descripcion_img p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 1024px){
+
+    #menu ul li a{
+    font-size: 2rem;
+    padding: .4rem;
+    margin: 0.2rem .7rem;
+    }
+    
+    .ingresar a {
+        font-size: 2rem;
+        margin: 0.2rem;
+        color:rgb(26, 243, 34);
+    }
+    .mainindex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+    .eslogan{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .eslogan h1 {                       /*GemGym */
+        font-size: 4rem;
+        color: #1cb056;
+        grid-area: nombre;
+
+            }
+    
+    .eslogan h2 {                       /*Encontramos tu valor*/
+        font-size: 3rem;
+        color: #119cd3;
+        grid-area: eslogan;
+
+        }
+    .index_hr{
+        margin: 0rem;
+        width: 100%;
+     }
+     .descripcion_p {
+        margin: 7rem 3rem;
+    }
+    .descripcion_img, .descripcion_img img {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        height: 60%;
+    }
+    .descripcion_img p {
+        margin: 0rem;
+        display: inline;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*                   media screen para movil                        */
+@media screen and (max-width: 767px) {
+    #menu, .nav {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    margin: .5rem 8rem;
+    padding-bottom: 2rem;
+    }
+
+    #menu img {
+        width: 110px;
+        height: 70px;
+    }
+    
+    #menu ul li {
+    font-size: 1.4rem;
+    padding: .4rem;
+    margin: 0.2rem;
+    }
+
+    .ingresar a {
+    margin: 0.2rem;
+    color:rgb(26, 243, 34);
+    }
+
+    .mainindex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eslogan{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eslogan h1{
+        margin-right: 20rem;
+        font-size: 2.6rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .eslogan h2{
+        margin: 0rem 0rem 5rem 2rem;
+        font-size: 2.1rem;
+    }
+    .index_hr{
+      margin: 0rem;
+      width: 100%;
+    }
+    
+    .descripcion_p {
+        margin: 6rem 3rem;
+    }
+    .descripcion_p1, .descripcion_p2{
+        font-size: 2rem;
+    }
+    .descripcion_img, .descripcion_img img {
+        display: flex;
+        flex-direction: column;
+        margin: 0rem;
+    }
+    .descripcion_img p {
+        margin: 0rem 0rem 2rem 0rem;
+    }
+
+
+    }
+
+
+
+
+
+/*                     PRESENTACION OTRAS PAGS                  */
+
+.cabecera_pag {
+    display: grid;
+    grid-template-areas:
+    "gem . ."
+    "eslogan . nombre";
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+    }
+
+.cabecera_pag h1{
+    grid-area: gem;
+    font-size: 5rem;
+    color: #1cb056;
+    transform: translate(20%, 20% );
+
+    }
+
+.cabecera_pag p {
+    font-size: 3rem;
+    color: #119cd3;
+    grid-area: eslogan;
+    transform: translatex(30%);
+    }
+
+.cabecera_pag h2{
+    font-size: 6rem;
+    grid-area: nombre;
+    transform: translatex(60%);
+    }
+
+    
+
+
+
+
+
+    /*Galeria*/
+
+.galeria_img  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 3rem;
+    justify-items: center;
+
+
+}
+
+.footer_pages_hr{
+    border: solid 0.1rem black;
+    margin-top: 10rem;
+}
+
+.pages_hr {
+    border: solid 0.1rem black;
+    margin-bottom: 5rem;
+}
+
+
+
+
+
+
+
+
+    /*footer*/
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1.5rem;
+    font-size: 1.4rem;
+    }
+
+.footer_index {
+    text-align: center;
+    padding-top: 15rem;
+    }

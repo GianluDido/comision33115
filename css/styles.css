@@ -200,8 +200,8 @@ img{
 .descripcion_img {
     margin-top: 10rem;
     display: grid ;
-    grid-template-columns: 10fr 10fr 10fr;
-    grid-template-rows: 9fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-items: center;
     row-gap: 1rem;
 }

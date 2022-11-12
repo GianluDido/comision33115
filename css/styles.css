@@ -5,8 +5,8 @@
 
 html {    
    font-size: 62.5%; /*1rem = 10px*/
-   background-image: url(../img/prism.png) ;    
    font-family: 'Calibri';
+   background-image: url(../img/prism.png) ;    
    background-blend-mode:hard-light;
    background-color: #119cd367;
     }
@@ -38,10 +38,11 @@ img{
     grid-template-areas: 
     "none logo nav ingresar";   
     grid-template-columns: 2fr 2fr 10fr 2fr  ;
-    border: solid #1cb056 0.2rem;
+    border-bottom: solid #1cb056 0.1rem;
     background-color: #161616;
     justify-items: center;
     align-items: center;
+    width: 100%;
     }
 
  #menu ul {
@@ -60,7 +61,8 @@ img{
 
  #menu ul li a:hover {
     color: #119cd3;
-    /*background-color:rgb(88, 88, 88);*/
+    border-radius: .4rem;
+    background-color:rgba(255, 255, 255, 0.048);
     }
 
 
@@ -73,13 +75,13 @@ img{
 
 .ingresar a {
     text-decoration: none;
-    color: #1cb056;
+    color:rgb(26, 243, 34);
     padding: 1.8rem 1.5rem 1.8rem 1.5rem;
     }
 
 .ingresar a:hover {
-    color: #119cd3;
-
+    color: #119cd3;   
+    background-color:rgba(255, 255, 255, 0.048);
     }
 
 
@@ -176,7 +178,7 @@ img{
 .index_hr{
     padding: 0.1rem;
     background-color: #1cb056;
-    margin: 0rem 50rem;
+    margin: 0rem 5rem;
     }
 
 
@@ -197,19 +199,41 @@ img{
     font-weight: bolder;
     }
 
-.descripcion_img {
+.descripcion_img {                     /* Div Imagenes y Subtitulos*/
     margin-top: 10rem;
-    display: grid ;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-template-areas: 
+    "cardio_img staff_img prensa_img"
+    "cardio staff prensa";
     justify-items: center;
     row-gap: 1rem;
+    column-gap: 0.8rem;
+    margin: 0rem 1rem;
+}
+
+.staff_img{
+grid-area: staff_img;
+}
+.prensa_img {
+    grid-area: prensa_img;
+}
+.cardio_img {
+    grid-area:cardio_img;
+}
+.staff{
+    grid-area:staff;
+}
+.cardio{
+    grid-area:cardio;
+}
+.prensa{
+    grid-area:prensa;
 }
 
 .descripcion_img img {                /*imagenes de los sectores*/
-    width: 51rem;
-    height: 32rem;
-    display: inline;
+    width: 100%;
+    height: 100%;
+
     border: solid 0.2rem black;
 
     }
@@ -219,6 +243,8 @@ img{
 }
 
 
+
+/*                   media screen para tablet NAV                      */
 @media screen and (max-width: 1024px){
 
     #menu ul li a{
@@ -237,6 +263,53 @@ img{
             flex-direction: column;
             align-items: center;
     }
+}
+
+/*                   media screen para movil  NAV                      */
+@media screen and (max-width: 767px) {
+    #menu, .nav {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    }
+
+    #menu img {
+    width: 110px;
+    height: 70px;
+    }
+    
+    #menu ul li {
+    font-size: 1.4rem;
+    padding: .4rem;
+    margin: 0.2rem;
+    }
+
+    #menu ul li a{
+    padding: .4rem 5rem;
+    border-radius: 2rem;
+    }
+
+    .ingresar a {
+    margin: 0.2rem;
+    color:rgb(26, 243, 34);
+    padding: .4rem 5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*                   media screen para tablet  INDEX                      */
+@media screen and (max-width: 1024px){
+
     .eslogan{
         display: flex;
         flex-direction: column;
@@ -260,14 +333,21 @@ img{
         margin: 0rem;
         width: 100%;
      }
+     .descripcion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+
      .descripcion_p {
         margin: 7rem 3rem;
     }
     .descripcion_img, .descripcion_img img {
         display: flex;
-        flex-direction: row;
-        width: 60%;
-        height: 60%;
+        flex-direction:column;
+        width: 90%;
+        height: 90%;
+        align-items: center;
     }
     .descripcion_img p {
         margin: 0rem;
@@ -275,40 +355,8 @@ img{
     }
 }
 
-
-
-
-
-
-
-
-
-/*                   media screen para movil                        */
+/*                   media screen para movil   INDEX                   */
 @media screen and (max-width: 767px) {
-    #menu, .nav {
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    margin: .5rem 8rem;
-    padding-bottom: 2rem;
-    }
-
-    #menu img {
-        width: 110px;
-        height: 70px;
-    }
-    
-    #menu ul li {
-    font-size: 1.4rem;
-    padding: .4rem;
-    margin: 0.2rem;
-    }
-
-    .ingresar a {
-    margin: 0.2rem;
-    color:rgb(26, 243, 34);
-    }
-
     .mainindex {
         display: flex;
         flex-direction: column;
@@ -358,13 +406,17 @@ img{
 
 
 
+
+
+
+
 /*                     PRESENTACION OTRAS PAGS                  */
 
 .cabecera_pag {
     display: grid;
     grid-template-areas:
-    "gem . ."
-    "eslogan . nombre";
+    "gem . "
+    "eslogan  nombre";
     grid-template-columns: 1fr auto 1fr;
     width: 100%;
     }
@@ -387,8 +439,48 @@ img{
 .cabecera_pag h2{
     font-size: 6rem;
     grid-area: nombre;
-    transform: translatex(60%);
+    transform: translatex(50rem);
     }
+
+
+
+
+    /*             media screen para borrar barra CABECERA OTRAS PAGS         */
+@media screen and (max-width: 1185px) {
+    .cabecera_pag h2 {
+        transform: translatex(40rem);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .cabecera_pag h2 {
+       width: 25rem;
+       font-size: 6rem;
+       transform: translatex(30rem);
+    }
+       .cabecera_pag h1 {
+        font-size: 4rem;
+    }
+  
+     .cabecera_pag p {
+        font-size: 2.1rem;
+     }
+}
+ 
+@media screen and (max-width: 767px) {
+    .cabecera_pag h1 {
+        font-size: 3.3rem;
+    }
+    .cabecera_pag h2 {
+        width: 15rem;
+        font-size: 3rem;
+     }
+     .cabecera_pag p {
+        font-size: 2rem;
+     }
+}
+
+
+
 
     
 
@@ -403,6 +495,7 @@ img{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     row-gap: 3rem;
+    column-gap: 1rem;
     justify-items: center;
 
 
@@ -417,6 +510,222 @@ img{
     border: solid 0.1rem black;
     margin-bottom: 5rem;
 }
+
+
+/*                   media screen para tablet   GALERIA                  */
+@media screen and (max-width: 1024px) {
+    .galeria_img{
+      width: auto;
+      height: auto;
+      column-gap: 1rem;
+      margin: 0rem 1rem;
+    }
+}
+
+/*                   media screen para movil GALERIA                        */
+@media screen and (max-width: 767px) {
+    .galeria_img{
+      display: flex;
+      flex-direction: column;
+      margin: 0rem 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    /*Sedes*/
+
+
+/*      DIV SEDE CENTRO-1       */
+#mapas {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+    }
+
+.mapa1 {
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas:
+    "info mapa ";
+    border: solid 1px white;
+    grid-template-columns: 1fr 2fr ;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.089);   
+    }
+
+.iframe_mapa1 {
+    grid-area: mapa;
+    width: 67rem;
+    height: 38rem;
+    border:solid 2px white;
+    border-radius: 1rem;
+    margin-left: 15rem;
+    }
+
+.ul_mapa1 {
+    grid-area: info;
+    list-style: none;
+    }
+
+.ul_mapa1 li {
+    margin: 2rem 0rem;
+    font-size: 2rem;
+    }
+
+.ul_mapa1 h2 {
+    font-size: 3rem;
+    }
+
+
+
+/*      DIV SEDE SUR-2        */
+.mapa2 {
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas:
+    "info mapa";
+    border: solid 1px white;
+    grid-template-columns: 1fr 2fr ;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.089);
+    }
+
+.iframe_mapa2 {
+    grid-area: mapa;
+    width: 67rem;
+    height: 38rem;
+    border:solid 2px white;
+    border-radius: 1rem;
+    margin-left: 15rem;
+    }
+
+.ul_mapa2 {
+    grid-area: info;
+    list-style: none;
+    }
+    
+.ul_mapa2 li {
+    margin: 2rem 0rem;
+    font-size: 2rem;
+    }
+
+.ul_mapa2 h2 {
+    font-size: 3rem;
+    }
+
+
+
+
+/*      DIV SEDE NORTE-3        */
+.mapa3 {
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas:
+    "info mapa ";
+    border: solid 1px white;
+    grid-template-columns: 1fr 2fr ;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.089);
+    }
+
+.iframe_mapa3 {
+    grid-area: mapa;
+    width: 67rem;
+    height: 38rem;
+    border:solid 2px white;
+    border-radius: 1rem;
+    margin-left: 15rem;
+    }
+
+.ul_mapa3 {
+    grid-area: info;
+    list-style: none;
+    }
+
+.ul_mapa3 li {
+    margin: 2rem 0rem;
+    font-size: 2rem;
+    }
+
+.ul_mapa3 h2 {
+    font-size: 3rem;
+    }    
+
+
+
+/*                   media screen para tablet   SEDES                  */
+@media screen and (max-width:1115px){
+   
+    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
+        font-size: 2rem;
+      }  
+      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
+        width: 47rem;
+        height: 23rem;
+        margin-left: 4.5rem;
+      }
+    
+}
+/*                   media screen para movil   SEDES                  */
+@media screen and (max-width:767px){
+    
+    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
+        font-size: 1.5rem;
+        margin: .5rem;
+        
+      }  
+
+      .ul_mapa1 h2,.ul_mapa2 h2, .ul_mapa3 h2 {
+        font-size: 2.5rem;       
+      } 
+
+      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
+        width: 37rem;
+        height: 20rem;
+
+      }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

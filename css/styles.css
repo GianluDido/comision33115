@@ -171,6 +171,7 @@ img{
  .eslogan img {                       /*frase motivadora*/
     border: solid 0.2rem #1cb056;
     grid-area: imagen;
+    width: 100%;
     }
 
 

@@ -7,7 +7,7 @@
 html {    
    font-size: 62.5%; /*1rem = 10px*/
    font-family: 'Calibri';
-   background-image: url(../img/prism.png) ;    
+   background-image: url(../img/prism.png);    
    background-blend-mode:hard-light;
    background-color: #119cd367;
 

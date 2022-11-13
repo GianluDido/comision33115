@@ -1,7 +1,8 @@
 *{
-
+    box-sizing: border-box;
     padding: 0;
-    margin: 0;}  
+    margin: 0;
+    }  
 
 html {    
    font-size: 62.5%; /*1rem = 10px*/
@@ -9,6 +10,7 @@ html {
    background-image: url(../img/prism.png) ;    
    background-blend-mode:hard-light;
    background-color: #119cd367;
+
     }
 
 img{
@@ -23,26 +25,27 @@ img{
 .nav {
     grid-area: nav;
 }
-   
 
 .logo {
     grid-area: logo;
     width: 65%;
     margin: 0.5rem 0rem;
+    width:100px;
+    
     }
-
-
-
+    
 #menu {
     display: grid;
+    grid-template-columns: 2fr 2fr 10fr 2fr;
     grid-template-areas: 
     "none logo nav ingresar";   
-    grid-template-columns: 2fr 2fr 10fr 2fr  ;
     border-bottom: solid #1cb056 0.1rem;
     background-color: #161616;
     justify-items: center;
     align-items: center;
     width: 100%;
+    padding: 1.2rem 0rem;
+
     }
 
  #menu ul {
@@ -54,7 +57,7 @@ img{
     color: #1cb056;
     text-decoration: none;
     display: block;
-    padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+    padding: 1.8rem 1.5rem ;
     font-size: 2.2rem;
     margin: 0rem 0.6rem;
     }
@@ -76,12 +79,13 @@ img{
 .ingresar a {
     text-decoration: none;
     color:rgb(26, 243, 34);
-    padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+    padding: 1.8rem 1.5rem ;
     }
 
 .ingresar a:hover {
     color: #119cd3;   
     background-color:rgba(255, 255, 255, 0.048);
+    border-radius: .4rem;
     }
 
 
@@ -145,32 +149,36 @@ img{
 
 .eslogan {
    display: grid;
+   grid-template-columns: 1.3fr 2fr ;
+   grid-template-rows:  0.1fr 1fr;
    grid-template-areas: 
    "nombre imagen"
    "eslogan imagen";
-   grid-template-rows:  0.1fr 1fr;
    background-color: rgba(0, 0, 0, 0.247);
    padding: 5rem 0rem;
 
-}
+ 
+    }
 
 .eslogan h1 {                       /*GemGym */
     font-size: 6rem;
     color: #1cb056;
     grid-area: nombre;
-    margin-left:  3rem;
-        }
+    margin-left: 3rem;
+    }
 
 .eslogan h2 {                       /*Encontramos tu valor*/
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #119cd3;
     grid-area: eslogan;
     margin-left: 6rem;
     }
 
  .eslogan img {                       /*frase motivadora*/
-    border: solid 0.2rem #1cb056;
+    border: solid 0.2rem ;
     grid-area: imagen;
+    margin: 0px auto;
+    border-radius: .2rem;
     }
 
 
@@ -203,7 +211,6 @@ img{
     margin-top: 10rem;
     display: grid;
     grid-template-areas: 
-    "cardio_img staff_img prensa_img"
     "cardio staff prensa";
     justify-items: center;
     row-gap: 1rem;
@@ -211,15 +218,6 @@ img{
     margin: 0rem 1rem;
 }
 
-.staff_img{
-grid-area: staff_img;
-}
-.prensa_img {
-    grid-area: prensa_img;
-}
-.cardio_img {
-    grid-area:cardio_img;
-}
 .staff{
     grid-area:staff;
 }
@@ -240,166 +238,6 @@ grid-area: staff_img;
 .descripcion_img p {
     text-align: center;
     font-size: 2rem;
-}
-
-
-
-/*                   media screen para tablet NAV                      */
-@media screen and (max-width: 1024px){
-
-    #menu ul li a{
-    font-size: 2rem;
-    padding: .4rem;
-    margin: 0.2rem .7rem;
-    }
-    
-    .ingresar a {
-        font-size: 2rem;
-        margin: 0.2rem;
-        color:rgb(26, 243, 34);
-    }
-    .mainindex {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-    }
-}
-
-/*                   media screen para movil  NAV                      */
-@media screen and (max-width: 767px) {
-    #menu, .nav {
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    padding-bottom: 2rem;
-    overflow: hidden;
-    }
-
-    #menu img {
-    width: 110px;
-    height: 70px;
-    }
-    
-    #menu ul li {
-    font-size: 1.4rem;
-    padding: .4rem;
-    margin: 0.2rem;
-    }
-
-    #menu ul li a{
-    padding: .4rem 5rem;
-    border-radius: 2rem;
-    }
-
-    .ingresar a {
-    margin: 0.2rem;
-    color:rgb(26, 243, 34);
-    padding: .4rem 5rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/*                   media screen para tablet  INDEX                      */
-@media screen and (max-width: 1024px){
-
-    .eslogan{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .eslogan h1 {                       /*GemGym */
-        font-size: 4rem;
-        color: #1cb056;
-        grid-area: nombre;
-
-            }
-    
-    .eslogan h2 {                       /*Encontramos tu valor*/
-        font-size: 3rem;
-        color: #119cd3;
-        grid-area: eslogan;
-
-        }
-    .index_hr{
-        margin: 0rem;
-        width: 100%;
-     }
-     .descripcion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-     }
-
-     .descripcion_p {
-        margin: 7rem 3rem;
-    }
-    .descripcion_img, .descripcion_img img {
-        display: flex;
-        flex-direction:column;
-        width: 90%;
-        height: 90%;
-        align-items: center;
-    }
-    .descripcion_img p {
-        margin: 0rem;
-        display: inline;
-    }
-}
-
-/*                   media screen para movil   INDEX                   */
-@media screen and (max-width: 767px) {
-    .mainindex {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .eslogan{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .eslogan h1{
-        margin-right: 20rem;
-        font-size: 2.6rem;
-        margin-bottom: 0.2rem;
-    }
-
-    .eslogan h2{
-        margin: 0rem 0rem 5rem 2rem;
-        font-size: 2.1rem;
-    }
-    .index_hr{
-      margin: 0rem;
-      width: 100%;
-    }
-    
-    .descripcion_p {
-        margin: 6rem 3rem;
-    }
-    .descripcion_p1, .descripcion_p2{
-        font-size: 2rem;
-    }
-    .descripcion_img, .descripcion_img img {
-        display: flex;
-        flex-direction: column;
-        margin: 0rem;
-    }
-    .descripcion_img p {
-        margin: 0rem 0rem 2rem 0rem;
-    }
-
-
     }
 
 
@@ -467,6 +305,9 @@ grid-area: staff_img;
 }
  
 @media screen and (max-width: 767px) {
+    .cabecera_pag {
+        overflow: hidden;
+    }
     .cabecera_pag h1 {
         font-size: 3.3rem;
     }
@@ -476,6 +317,30 @@ grid-area: staff_img;
      }
      .cabecera_pag p {
         font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 670px) {
+    .cabecera_pag{
+    margin-top: 2rem;
+    grid-template-rows: 1.3fr 1.2fr;
+    grid-template-columns: 3fr 0rem 1fr;
+    }
+
+    .cabecera_pag h1 {
+        font-size: 3.3rem;
+        transform: translateX(1rem);
+    }
+
+    .cabecera_pag h2 {
+        font-size: 3rem;
+        transform: translateX(0rem);
+        margin: 0rem auto;
+     }
+
+     .cabecera_pag p {
+        font-size: 1.9rem;
+        transform: translateX(2rem);
      }
 }
 
@@ -512,6 +377,10 @@ grid-area: staff_img;
 }
 
 
+
+
+
+
 /*                   media screen para tablet   GALERIA                  */
 @media screen and (max-width: 1024px) {
     .galeria_img{
@@ -530,6 +399,7 @@ grid-area: staff_img;
       margin: 0rem 1rem;
     }
 }
+
 
 
 
@@ -669,6 +539,10 @@ grid-area: staff_img;
 
 
 
+
+
+
+
 /*                   media screen para tablet   SEDES                  */
 @media screen and (max-width:1115px){
    
@@ -745,4 +619,189 @@ footer {
 .footer_index {
     text-align: center;
     padding-top: 15rem;
+    }
+
+
+    
+/*                   media screen para tablet NAV                      */
+@media screen and (max-width: 1024px){
+
+    #menu {
+        padding: 1.2rem 0rem;
+    }
+
+    #menu ul li a{
+    font-size: 2rem;
+    padding: .4rem;
+    margin: 0.2rem .7rem;
+    }
+    
+    .ingresar a {
+        font-size: 2rem;
+        margin: 0.2rem;
+        color:rgb(26, 243, 34);
+        padding: .4rem 1rem;
+    }
+    .logo{
+       min-width:100px;
+    }
+
+    }
+
+
+/*                   media screen para movil  NAV                      */
+@media screen and (max-width: 767px) {
+    #menu, .nav {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    padding-bottom: 2rem;
+    }
+
+    #menu img {
+    width: 110px;
+    height: 70px;
+    }
+    
+    #menu ul li {
+    font-size: 1.4rem;
+    padding: .4rem;
+    margin: 0.2rem;
+    }
+
+    #menu ul li a{
+    padding: .4rem 5rem;
+    border-radius: 2rem;
+    }
+    
+    .ingresar a {
+    margin: 0.2rem;
+    color:rgb(26, 243, 34);
+    padding: .4rem 5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*                   media screen para tablet  INDEX                      */
+@media screen and (max-width: 1024px){
+
+    .eslogan{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .eslogan h1 {                       /*GemGym */
+        font-size: 4rem;
+        color: #1cb056;
+        grid-area: nombre;
+
+            }
+    
+    .eslogan h2 {                       /*Encontramos tu valor*/
+        font-size: 3rem;
+        color: #119cd3;
+        grid-area: eslogan;
+
+        }
+    .index_hr{
+        margin: 0rem;
+        width: 100%;
+     }
+     .descripcion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+     }
+
+     .descripcion_p {
+        margin: 7rem 3rem;
+    }
+    .descripcion_img{
+        display: grid;
+        grid-template-areas:
+        "staff prensa"
+        "cardio cardio";
+        grid-template-rows: repeat(2, 400px);
+    }
+
+    .staff {
+        grid-area:staff;
+        max-height: 30rem;
+    }
+
+    .prensa {
+        grid-area:prensa;
+        max-height: 30rem;
+    }
+
+    .cardio {
+        grid-area:cardio;
+        max-width: 60rem;
+    }
+
+    .descripcion_img div {
+        width: 90%;
+        height: 90%;
+        margin-bottom: 8rem;
+    }
+
+    .descripcion_img div p {
+        font-size: 2.4rem;
+    }
+}
+
+/*                   media screen para movil   INDEX                   */
+@media screen and (max-width: 767px) {
+
+
+    .eslogan{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .eslogan h1{
+        font-size:5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .eslogan h2{
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+    
+    .descripcion_p {
+        margin: 6rem 3rem;
+    }
+    .descripcion_p1, .descripcion_p2{
+        font-size: 2rem;
+    }
+    .descripcion_img{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        align-items: center;
+        justify-items: center;
+        row-gap: 3rem;
+    }
+    .descripcion_img div img  {
+        margin-bottom: 1rem;
+
+        height: auto;
+    }
+
+    .descripcion_img div p {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+
     }

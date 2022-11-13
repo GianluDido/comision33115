@@ -594,14 +594,15 @@ footer {
         max-width: 60rem;
     }
 
-    .descripcion_img div {
+    .descripcion_img div img {
         width: 90%;
         height: 90%;
-        margin-bottom: 8rem;
+
     }
 
     .descripcion_img div p {
         font-size: 2.4rem;
+        margin-bottom: 8rem;
     }
 }
 
@@ -640,14 +641,13 @@ footer {
         row-gap: 3rem;
     }
     .descripcion_img div img  {
-        margin-bottom: 1rem;
-
-        height: auto;
+        max-width: 50rem;
     }
 
     .descripcion_img div p {
         margin-bottom: 3rem;
         font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
 }

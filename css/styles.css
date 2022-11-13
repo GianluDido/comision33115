@@ -445,6 +445,181 @@ img{
 
 
 
+    /*Actividades*/
+
+
+    /* MUSCULACION ANIMACION */
+
+.musculacion_sedes{
+    list-style: none;
+    }
+
+
+.musculacion_img{
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    border: solid rgb(31, 194, 39);
+    }
+
+.musculacion_img ul {
+    display: flex;
+    width: 300%;
+    animation: slide 6s infinite alternate;
+    padding: 0;
+    margin: 0;
+    }
+
+.musculacion_img ul li {
+    width: 100%;
+
+    }
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    33% {margin-left: 0;}
+
+    38% {margin-left: -100%;}
+    68% {margin-left: -100%;}
+    
+    71% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+    }
+
+    
+   
+   
+   
+    /* FUNCIONAL ANIMACION */
+
+.funcional_sedes{
+    list-style: none;
+    }
+
+.funcional_img {
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    border: solid rgb(31, 194, 39);
+    }
+
+.funcional_img ul {
+    display: flex;
+    width: 300%;
+    animation: slide 6s infinite alternate;
+    padding: 0;
+    margin: 0;;
+    }
+
+.funcional_img ul li {
+    width: 100%;
+    }
+    
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    33% {margin-left: 0;}
+
+    38% {margin-left: -100%;}
+    68% {margin-left: -100%;}
+    
+    71% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+    }
+
+
+
+
+
+
+
+    /* SPINNING ANIMACION */
+
+.spinning_sedes{
+    list-style: none;
+    }
+.spinning_img{
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    border: solid rgb(31, 194, 39);
+    }
+
+.spinning_img ul{
+    display: flex;
+    width: 300%;
+    animation: slide 6s infinite alternate;
+    padding: 0;
+    margin: 0;;
+    }
+
+.spinning_img ul li {
+    width: 100%;
+    }
+    
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    33% {margin-left: 0;}
+
+    38% {margin-left: -100%;}
+    68% {margin-left: -100%;}
+    
+    71% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+    }
+
+
+
+
+
+
+    /* CROSSFIT ANIMACION */
+
+
+.crossfit_sedes{
+    list-style: none;
+    }
+
+.crossfit_img{
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    border: solid rgb(31, 194, 39);
+    }
+    
+.crossfit_img ul {
+    display: flex;
+    width: 300%;
+    animation: slide 6s infinite alternate;
+    padding: 0;
+    margin: 0;;
+    }
+
+.crossfit_img ul li {
+    width: 100%;
+    }
+    
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    33% {margin-left: 0;}
+
+    38% {margin-left: -100%;}
+    68% {margin-left: -100%;}
+    
+    71% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+    }
+
+
+
+
+
+
+
+
+
 
 
 

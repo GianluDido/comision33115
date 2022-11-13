@@ -5,17 +5,17 @@
     }  
 
 html {    
-   font-size: 62.5%; /*1rem = 10px*/
-   font-family: 'Calibri';
+    font-size: 62.5%; /*1rem = 10px*/
+    font-family: 'Calibri';
    background-image: url(../img/prism.png);    
    background-blend-mode:hard-light;
    background-color: #119cd367;
-
     }
 
 img{
     max-width: 100%;
-}
+    }
+
 
 
 
@@ -24,7 +24,7 @@ img{
 
 .nav {
     grid-area: nav;
-}
+    }
 
 .logo {
     grid-area: logo;
@@ -101,7 +101,7 @@ img{
     grid-area: form;
     width: 50rem;
     height: 40rem;
-    border: solid #1cb056 .2rem;
+    border: solid #119cd3 .2rem;
     background-color: #1d363f;
     border-radius: 2rem;
     }
@@ -127,7 +127,7 @@ img{
     background:none;
     font-size: 2rem;
     border: solid;
-    border-color:  rgb(88, 158, 141);
+    border-color: #119cd3;
     border-radius: .7rem;
     color: #119cd3;
   
@@ -283,74 +283,6 @@ img{
 
 
 
-    /*             media screen para borrar barra CABECERA OTRAS PAGS         */
-@media screen and (max-width: 1185px) {
-    .cabecera_pag h2 {
-        transform: translatex(40rem);
-    }
-}
-@media screen and (max-width: 1024px) {
-    .cabecera_pag h2 {
-       width: 25rem;
-       font-size: 6rem;
-       transform: translatex(30rem);
-    }
-       .cabecera_pag h1 {
-        font-size: 4rem;
-    }
-  
-     .cabecera_pag p {
-        font-size: 2.1rem;
-     }
-}
- 
-@media screen and (max-width: 767px) {
-    .cabecera_pag {
-        overflow: hidden;
-    }
-    .cabecera_pag h1 {
-        font-size: 3.3rem;
-    }
-    .cabecera_pag h2 {
-        width: 15rem;
-        font-size: 3rem;
-     }
-     .cabecera_pag p {
-        font-size: 2rem;
-     }
-}
-
-@media screen and (max-width: 670px) {
-    .cabecera_pag{
-    margin-top: 2rem;
-    grid-template-rows: 1.3fr 1.2fr;
-    grid-template-columns: 3fr 0rem 1fr;
-    }
-
-    .cabecera_pag h1 {
-        font-size: 3.3rem;
-        transform: translateX(1rem);
-    }
-
-    .cabecera_pag h2 {
-        font-size: 3rem;
-        transform: translateX(0rem);
-        margin: 0rem auto;
-     }
-
-     .cabecera_pag p {
-        font-size: 1.9rem;
-        transform: translateX(2rem);
-     }
-}
-
-
-
-
-    
-
-
-
 
 
     /*Galeria*/
@@ -375,35 +307,6 @@ img{
     border: solid 0.1rem black;
     margin-bottom: 5rem;
 }
-
-
-
-
-
-
-/*                   media screen para tablet   GALERIA                  */
-@media screen and (max-width: 1024px) {
-    .galeria_img{
-      width: auto;
-      height: auto;
-      column-gap: 1rem;
-      margin: 0rem 1rem;
-    }
-}
-
-/*                   media screen para movil GALERIA                        */
-@media screen and (max-width: 767px) {
-    .galeria_img{
-      display: flex;
-      flex-direction: column;
-      margin: 0rem 1rem;
-    }
-}
-
-
-
-
-
 
 
 
@@ -543,64 +446,6 @@ img{
 
 
 
-/*                   media screen para tablet   SEDES                  */
-@media screen and (max-width:1115px){
-   
-    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
-        font-size: 2rem;
-      }  
-      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
-        width: 47rem;
-        height: 23rem;
-        margin-left: 4.5rem;
-      }
-    
-}
-/*                   media screen para movil   SEDES                  */
-@media screen and (max-width:767px){
-    
-    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
-        font-size: 1.5rem;
-        margin: .5rem;
-        
-      }  
-
-      .ul_mapa1 h2,.ul_mapa2 h2, .ul_mapa3 h2 {
-        font-size: 2.5rem;       
-      } 
-
-      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
-        width: 37rem;
-        height: 20rem;
-
-      }
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -680,6 +525,7 @@ footer {
     padding: .4rem 5rem;
     }
 }
+/*                       ---------------------------                    */
 
 
 
@@ -689,8 +535,7 @@ footer {
 
 
 
-
-/*                   media screen para tablet  INDEX                      */
+/*                   media screen para tablet  INDEX                  */
 @media screen and (max-width: 1024px){
 
     .eslogan{
@@ -804,4 +649,165 @@ footer {
         font-size: 2rem;
     }
 
+}
+/*                      ---------------------------                     */    
+
+
+
+
+
+
+
+/*             media screen para borrar barra CABECERA OTRAS PAGS         */
+@media screen and (max-width: 1185px) {
+    .cabecera_pag h2 {
+        transform: translatex(40rem);
     }
+}
+@media screen and (max-width: 1024px) {
+    .cabecera_pag h2 {
+       width: 25rem;
+       font-size: 6rem;
+       transform: translatex(30rem);
+    }
+       .cabecera_pag h1 {
+        font-size: 4rem;
+    }
+  
+     .cabecera_pag p {
+        font-size: 2.1rem;
+     }
+}
+ 
+@media screen and (max-width: 767px) {
+    .cabecera_pag {
+        overflow: hidden;
+    }
+    .cabecera_pag h1 {
+        font-size: 3.3rem;
+    }
+    .cabecera_pag h2 {
+        width: 15rem;
+        font-size: 3rem;
+     }
+     .cabecera_pag p {
+        font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 670px) {
+    .cabecera_pag{
+    margin-top: 2rem;
+    grid-template-rows: 1.3fr 1.2fr;
+    grid-template-columns: 3fr 0rem 1fr;
+    }
+
+    .cabecera_pag h1 {
+        font-size: 3.3rem;
+        transform: translateX(1rem);
+    }
+
+    .cabecera_pag h2 {
+        font-size: 3rem;
+        transform: translateX(0rem);
+        margin: 0rem auto;
+     }
+
+     .cabecera_pag p {
+        font-size: 1.9rem;
+        transform: translateX(2rem);
+     }
+}
+/*                          ---------------------------                     */
+
+
+
+
+
+
+/*                   media screen para tablet   GALERIA                  */
+@media screen and (max-width: 1024px) {
+    .galeria_img{
+      width: auto;
+      height: auto;
+      column-gap: 1rem;
+      margin: 0rem 1rem;
+    }
+}
+
+/*                   media screen para movil GALERIA                      */
+@media screen and (max-width: 767px) {
+    .galeria_img{
+      display: flex;
+      flex-direction: column;
+      margin: 0rem 1rem;
+    }
+}
+/*                        ---------------------------                     */
+
+
+
+
+
+
+
+    /*                   media screen para tablet   SEDES             */
+@media screen and (max-width:1115px){
+   
+    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
+        font-size: 2rem;
+      }  
+      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
+        width: 47rem;
+        height: 23rem;
+        margin-left: 4.5rem;
+      }
+    
+}
+/*                   media screen para movil   SEDES                   */
+@media screen and (max-width:767px){
+    
+    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
+        font-size: 1.5rem;
+        margin: .5rem;
+        
+      }  
+
+      .ul_mapa1 h2,.ul_mapa2 h2, .ul_mapa3 h2 {
+        font-size: 2.5rem;       
+      } 
+
+      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
+        width: 37rem;
+        height: 20rem;
+
+      }
+    
+}
+@media screen and (max-width:630px){ 
+    
+    .mapa1, .mapa2, .mapa3{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
+        font-size: 1.6rem;
+        margin: .1rem;
+      }  
+
+      .ul_mapa1 h2,.ul_mapa2 h2, .ul_mapa3 h2 {
+        font-size: 2.1rem;  
+      } 
+
+      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
+        width: 80%;
+        margin: 0rem auto;
+        margin-bottom: 1rem;
+      }
+    
+
+}
+/*                       ---------------------------                    */

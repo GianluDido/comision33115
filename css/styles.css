@@ -460,6 +460,7 @@ img{
     width: 50%;
     margin: auto;
     border: solid rgb(31, 194, 39);
+
     }
 
 .musculacion_img ul {
@@ -472,7 +473,7 @@ img{
 
 .musculacion_img ul li {
     width: 100%;
-
+    list-style: none;
     }
 
 @keyframes slide {
@@ -513,6 +514,7 @@ img{
 
 .funcional_img ul li {
     width: 100%;
+    list-style: none;
     }
     
 
@@ -555,6 +557,7 @@ img{
 
 .spinning_img ul li {
     width: 100%;
+    list-style: none;
     }
     
 
@@ -598,6 +601,7 @@ img{
 
 .crossfit_img ul li {
     width: 100%;
+    list-style: none;
     }
     
 
@@ -614,11 +618,93 @@ img{
 
 
 
+#carruseles{
+    margin-bottom: 10rem;
+    }
+
+#carrusel_actividad{
+    background-color: #1095ca31;
+    border: solid 1px;
+    }
+.musculacion_texto, .funcional_texto, .spinning_texto, .crossfit_texto{
+    margin: auto;
+
+    }
+
+.titulo_actividad{
+    font-size: 4rem;
+
+    }
+
+.sedes_actividad{
+    margin: auto;
+    }
+
+.sedes_actividad ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+    }
 
 
 
+/* Media para targetas de carruseles */
+
+@media screen and (max-width:767px) {
+    #carruseles{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr) ;
+        justify-items:center;
+       }
+       .sedes_actividad ul{
+        row-gap: 1.4rem;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: .5rem;
+       }
+       .titulo_actividad{
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+       }
+       #carrusel_actividad{
+        width: 95%;
+        margin-bottom: 3rem;
+       }
+}
 
 
+@media screen and (max-width:560px) {
+    #carruseles{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+       }
+       .sedes_actividad ul{
+        row-gap: 1.4rem;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+       }
+     
+       .titulo_actividad{
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+       }
+
+    }
 
 
 

@@ -16,7 +16,7 @@
 
 <body style="background-image: url(img/prism.png); height: 1vh;">    <!--agrego Style en linea porque background-image-->
     <header> <!--CABECERA-->
-        <div class="actvidades_nav"> 
+        <div class="actvidades_nav "> 
             <nav id="menu">
                 <img src="../img/logo1.png" alt="" class="logo">
                 <ul class="nav"> 
@@ -34,51 +34,66 @@
 
 
 
- <main class="mainindex"> <!--CONTENIDO PRINCIPAL-->
+ <main id="main_actividades"> <!--CONTENIDO PRINCIPAL-->
     <section class="cabecera_pag">
         <h1>GemGym</h1>
         <p>Encontramos tu verdadero valor </p>   <h2>Actividades</h2>
       
       </div>
-     </section>
+    </section>
 
-        <!--MUSCULACION-->
-    <section class="carrusel_musculacion">
-      
-      <div class="musculacion_texto">
-        <h2>Musculación</h2>
+  <section id="carruseles" class="container-xl "> <!--Container para bootstrap de los carruseles -->
+   
+   
+    <!--MUSCULACION-->
+    <section id="carrusel_actividad" class="row mt-5  bg-opacity-25 ">
+
+      <div class="musculacion_texto col-xl-4 col-md-4 "><!--columna principal-->
         
-        <ul class="musculacion_sedes">
+        <div class="row">
+          <h2 class="titulo_actividad">Musculación</h2><!--Titulo de Actividad-->
+        </div>
+      
+         <div class="row sedes_actividad">
+          <ul class="musculacion_sedes "> <!--lista de sedes-->
           <li>Sede del Sur</li>
           <li>Sede del Norte</li>
           <li>Sede del centro</li>
-        </ul>
+          </ul>
+         </div>
       </div>
       
-      <div class="musculacion_img">
+      <div class="musculacion_img col-xl-8 p-0 ">           <!--carrusel de img-->
         <ul>
           <li> <img src="../img/negro.png" alt=""> </li>
           <li> <img src="../img/blanco.jpg" alt=""> </li>
           <li> <img src="../img/rosa.jpg" alt=""> </li>
         </ul>
       </div>
+
     </section>
 
 
 
         <!--FUNCIONAL-->
-    <section class="carrusel_funcional">
+    <section id="carrusel_actividad" class="row mt-5 bg-opacity-25">
       
-      <div class="funcional_texto">
-        <h2>Funcional</h2>
-        <ul class="funcional_sedes">
+      <div class="funcional_texto col-xl-4 col-md-4"><!--columna principal-->
+        
+        <div class="row"><!--Titulo Actividad-->
+          <h2 class="titulo_actividad">Funcional</h2>
+        </div>
+
+        <div class="row sedes_actividad"> <!--lista de sedes-->
+          <ul class="funcional_sedes">
           <li>Sede del Sur</li>
           <li>Sede del Norte</li>
           <li>Sede del centro</li>
-        </ul>
+          </ul>
+        </div>
       </div>
 
-        <div class="funcional_img">
+        <div class="funcional_img col-xl-8 p-0 ">  <!--carrusel de img-->
           <ul>
             <li> <img src="../img/negro.png" alt=""> </li>
             <li> <img src="../img/blanco.jpg" alt=""> </li>
@@ -86,22 +101,29 @@
           </ul>
         </div>
     </section>
+
 
 
 
         <!--SPINNING-->
-    <section class="carrusel_spinning">
+    <section id="carrusel_actividad" class="row mt-5 bg-opacity-25">
      
-      <div class="spinning_texto">
-        <h2>Spinning</h2>
-        <ul class="spinning_sedes">
-          <li>Sede del Sur</li>
-          <li>Sede del Norte</li>
-          <li>Sede del centro</li>
-        </ul>
+      <div class="spinning_texto col-xl-4 col-md-4 "><!--columna principal-->
+        
+        <div class="row"> <!--Titulo Actividad-->
+          <h2 class="titulo_actividad">Spinning</h2>
+        </div>  
+
+        <div class="row sedes_actividad"> <!--lista de sedes-->
+         <ul class="spinning_sedes"> 
+           <li>Sede del Sur</li>
+           <li>Sede del Norte</li>
+           <li>Sede del centro</li>
+          </ul>
+        </div>
       </div>
 
-        <div class="spinning_img">
+        <div class="spinning_img col-xl-8 p-0 ">  <!--carrusel de img-->
           <ul>
             <li> <img src="../img/negro.png" alt=""> </li>
             <li> <img src="../img/blanco.jpg" alt=""> </li>
@@ -109,22 +131,30 @@
           </ul>
         </div>
     </section>
+
 
 
 
         <!--CROSSFIT-->
-    <section class="carrusel_crossfit">
-      <div class="crossfit_texto">
-        <h2>Crossfit</h2>
-        <ul class="crossfit_sedes">
-          <li>Sede del Sur</li>
-          <li>Sede del Norte</li>
-          <li>Sede del centro</li>
-        </ul>
-      </div>
+    <section id="carrusel_actividad" class="row mt-5 bg-opacity-25">
+      
+      <div class="crossfit_texto col-xl-4 col-md-4  "><!--columna principal-->
+        
+        <div class="row"> <!--Titulo Actividad-->
+          <h2 class="titulo_actividad">Crossfit</h2>
+        </div>
 
+        <div class="row sedes_actividad"> <!--lista de sedes-->
+          <ul class="crossfit_sedes">
+            <li>Sede del Sur</li>
+            <li>Sede del Norte</li>
+            <li>Sede del centro</li>
+          </ul>
+        </div>
+
+      </div>
   
-        <div class="crossfit_img">
+        <div class="crossfit_img col-xl-8 p-0 ">  <!--carrusel de img-->
           <ul>
             <li> <img src="../img/negro.png" alt=""> </li>
             <li> <img src="../img/blanco.jpg" alt=""> </li>
@@ -132,6 +162,11 @@
           </ul>
         </div>
     </section>
+
+  </section>
+</main>
+
+
 
 
 

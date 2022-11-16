@@ -10,7 +10,6 @@ html {
    background-image: url(../img/prism.png);    
    background-blend-mode:hard-light;
    background-color: #119cd367;
-
     }
 
 img{
@@ -632,12 +631,14 @@ img{
     }
 
 .titulo_actividad{
-    font-size: 4rem;
+    font-size: 5rem;
+    color: rgb(189, 202, 212);
 
     }
 
 .sedes_actividad{
     margin: auto;
+    color: rgb(189, 202, 212);
     }
 
 .sedes_actividad ul {
@@ -661,14 +662,14 @@ img{
        }
        .sedes_actividad ul{
         row-gap: 1.4rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin: .5rem;
        }
        .titulo_actividad{
-        font-size: 2rem;
+        font-size: 4rem;
         margin-top: 1rem;
         margin-bottom: 0;
         display: flex;
@@ -678,6 +679,11 @@ img{
         width: 95%;
         margin-bottom: 3rem;
        }
+       .musculacion_img, .funcional_img, .spinning_img, .crossfit_img{
+        width: 95%;
+        margin-bottom:1rem;
+        margin-top: 1rem;
+       }
 }
 
 
@@ -686,10 +692,11 @@ img{
         display: flex;
         flex-direction: column;
         align-items:center;
+        margin-top: 2rem;
        }
        .sedes_actividad ul{
         row-gap: 1.4rem;
-        font-size: 1rem;
+        font-size: 1.4rem;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -697,12 +704,15 @@ img{
        }
      
        .titulo_actividad{
-        font-size: 2rem;
+        font-size: 3rem;
         margin-top: 2rem;
         margin-bottom: 0;
         display: flex;
         justify-content: center;
-       }
+        }
+        .musculacion_img, .funcional_img, .crossfit_img, .spinning_img{
+            width: 100%;
+        }
 
     }
 
@@ -921,16 +931,21 @@ footer {
 
 
 /*             media screen para borrar barra CABECERA OTRAS PAGS         */
+@media screen and (max-width: 1400px) {
+    .cabecera_pag h2 {
+        transform: translatex(30rem);
+    }
+}
 @media screen and (max-width: 1185px) {
     .cabecera_pag h2 {
         transform: translatex(40rem);
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1090px) {
     .cabecera_pag h2 {
        width: 25rem;
        font-size: 6rem;
-       transform: translatex(30rem);
+       transform: translatex(20rem);
     }
        .cabecera_pag h1 {
         font-size: 4rem;
@@ -961,7 +976,7 @@ footer {
     .cabecera_pag{
     margin-top: 2rem;
     grid-template-rows: 1.3fr 1.2fr;
-    grid-template-columns: 3fr 0rem 1fr;
+    grid-template-columns: 1fr 0rem 1fr;
     }
 
     .cabecera_pag h1 {
@@ -971,7 +986,7 @@ footer {
 
     .cabecera_pag h2 {
         font-size: 3rem;
-        transform: translateX(0rem);
+        transform: translateX(6rem);
         margin: 0rem auto;
      }
 
@@ -980,6 +995,31 @@ footer {
         transform: translateX(2rem);
      }
 }
+
+@media screen and (max-width: 430px) {
+    .cabecera_pag{
+    margin-top: 2rem;
+    grid-template-rows: 1fr 1.2fr;
+    grid-template-columns: 2fr 0rem 1fr;
+    }
+
+    .cabecera_pag h1 {
+        font-size: 3.8rem;
+        transform: translateX(1rem);
+    }
+
+    .cabecera_pag h2 {
+        font-size: 2rem;
+        transform: translateX(2rem);
+        margin: 0rem auto;
+     }
+
+     .cabecera_pag p {
+        font-size: 1.9rem;
+        transform: translateX(2rem);
+     }
+}
+/*    
 /*                          ---------------------------                     */
 
 
@@ -1071,5 +1111,24 @@ footer {
       }
     
 
+}
+/*                       ---------------------------                    */
+
+
+
+
+
+
+
+
+
+/*                   media screen para movil   CUENTA                   */
+@media screen and (max-width:524px){
+    #form_section{
+        justify-content: center;
+    }
+    .form{
+        width: 35rem;
+    }
 }
 /*                       ---------------------------                    */

@@ -18,9 +18,7 @@ img{
 
 
 
-
-
-/*                        NAV*                       */
+/*--------------------NAV*--------------------*/
 
 .nav {
     grid-area: nav;
@@ -31,17 +29,17 @@ img{
     width: 65%;
     margin: 0.5rem 0rem;
     width:100px;
-    
+    justify-self: left !important;    
     }
     
 #menu {
     display: grid;
-    grid-template-columns: 2fr 2fr 10fr 2fr;
+    grid-template-columns: .5fr 2fr 10fr;
     grid-template-areas: 
-    "none logo nav ingresar";   
+    ". logo nav";   
     border-bottom: solid #1cb056 0.1rem;
     background-color: #161616;
-    justify-items: center;
+    justify-items: right;
     align-items: center;
     width: 100%;
     padding: 1.2rem 0rem;
@@ -51,6 +49,7 @@ img{
  #menu ul {
     display: flex;
     list-style: none;
+    margin-right: 2rem;
     }
 
  #menu ul li a {
@@ -58,8 +57,12 @@ img{
     text-decoration: none;
     display: block;
     padding: 1.8rem 1.5rem ;
-    font-size: 2.2rem;
-    margin: 0rem 0.6rem;
+    font-size: 3rem;
+    margin: 0rem 0.7rem;
+    }
+
+#menu ul li:nth-child(6) a{
+    color:rgb(26, 243, 34);
     }
 
  #menu ul li a:hover {
@@ -68,27 +71,14 @@ img{
     background-color:rgba(255, 255, 255, 0.048);
     }
 
-
-
-.ingresar  {         /*  BOTON INGRESAR EN NAV     */
-    grid-area: ingresar;
-    font-size: 2.2rem;
-    margin: 0rem 0.6rem;
-    }
-
-.ingresar a {
-    text-decoration: none;
-    color:rgb(26, 243, 34);
-    padding: 1.8rem 1.5rem ;
-    }
-
-.ingresar a:hover {
-    color: #119cd3;   
-    background-color:rgba(255, 255, 255, 0.048);
-    border-radius: .4rem;
+#input_logo {
+    display: none;
     }
 
 
+
+
+/*--------------------INGRESAR--------------------*/
 
 #form_section {
     margin-top: 18rem;
@@ -145,7 +135,7 @@ img{
 
 
 
-/*                      INDEX / HOME                       */
+/*--------------------INDEX / HOME--------------------*/
 
 .eslogan {
    display: grid;
@@ -192,6 +182,7 @@ img{
 
 .descripcion_p {
     display: flex;
+    color: rgb(189, 202, 212);
     flex-direction: column;
     margin: 8rem 30rem;
     text-align: center;
@@ -248,44 +239,44 @@ img{
 
 
 
-/*                     PRESENTACION OTRAS PAGS                  */
+/*--------------------PRESENTACION OTRAS PAGS--------------------*/
 
 .cabecera_pag {
     display: grid;
     grid-template-areas:
     "gem . "
     "eslogan  nombre";
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr  1fr;
     width: 100%;
+    
     }
 
 .cabecera_pag h1{
     grid-area: gem;
     font-size: 5rem;
     color: #1cb056;
-    transform: translate(20%, 20% );
-
     }
 
 .cabecera_pag p {
     font-size: 3rem;
     color: #119cd3;
     grid-area: eslogan;
-    transform: translatex(30%);
+    transform: translatex(10%);
     }
 
 .cabecera_pag h2{
-    font-size: 6rem;
+    font-size: 5rem;
     grid-area: nombre;
-    transform: translatex(50rem);
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    justify-self: right;
     }
 
 
 
 
 
-
-    /*Galeria*/
+/*--------------------Galeria--------------------*/
 
 .galeria_img  {
     display: grid;
@@ -315,146 +306,72 @@ img{
 
 
 
-    /*Sedes*/
+/*--------------------Sedes--------------------*/
 
-
-/*      DIV SEDE CENTRO-1       */
 #mapas {
     display: flex;
     flex-direction: column;
     row-gap: 10rem;
     }
 
-.mapa1 {
-    width: 100%;
-    margin-top: 2rem;
-    display: grid;
-    grid-template-areas:
-    "info mapa ";
-    border: solid 1px white;
-    grid-template-columns: 1fr 2fr ;
-    justify-items: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.089);   
-    }
-
-.iframe_mapa1 {
-    grid-area: mapa;
-    width: 67rem;
-    height: 38rem;
-    border:solid 2px white;
-    border-radius: 1rem;
-    margin-left: 15rem;
-    }
-
-.ul_mapa1 {
-    grid-area: info;
-    list-style: none;
-    }
-
-.ul_mapa1 li {
-    margin: 2rem 0rem;
-    font-size: 2rem;
-    }
-
-.ul_mapa1 h2 {
-    font-size: 3rem;
-    }
-
-
-
-/*      DIV SEDE SUR-2        */
-.mapa2 {
+.info_mapa {
     width: 100%;
     margin-top: 2rem;
     display: grid;
     grid-template-areas:
     "info mapa";
-    border: solid 1px white;
+    border-top: solid 1px rgb(93, 190, 185);
+    border-bottom: solid 1px rgb(93, 190, 185);
     grid-template-columns: 1fr 2fr ;
     justify-items: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.089);
     }
 
-.iframe_mapa2 {
+.iframe_mapa {
     grid-area: mapa;
     width: 67rem;
     height: 38rem;
-    border:solid 2px white;
     border-radius: 1rem;
-    margin-left: 15rem;
+    margin: 1rem 15rem 1rem 0rem;
+    justify-self: right;
     }
 
-.ul_mapa2 {
+.ul_mapa {
     grid-area: info;
     list-style: none;
+    color: white;
     }
     
-.ul_mapa2 li {
-    margin: 2rem 0rem;
+.ul_mapa li {
+    margin-left: 5rem;
     font-size: 2rem;
     }
 
-.ul_mapa2 h2 {
-    font-size: 3rem;
+.ul_mapa li:not(:last-of-type) {
+    margin-bottom: 2rem ;
+    }
+
+.ul_mapa h2 {
+    font-size: 5rem;
     }
 
 
 
 
-/*      DIV SEDE NORTE-3        */
-.mapa3 {
-    width: 100%;
-    margin-top: 2rem;
-    display: grid;
-    grid-template-areas:
-    "info mapa ";
-    border: solid 1px white;
-    grid-template-columns: 1fr 2fr ;
-    justify-items: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.089);
-    }
-
-.iframe_mapa3 {
-    grid-area: mapa;
-    width: 67rem;
-    height: 38rem;
-    border:solid 2px white;
-    border-radius: 1rem;
-    margin-left: 15rem;
-    }
-
-.ul_mapa3 {
-    grid-area: info;
-    list-style: none;
-    }
-
-.ul_mapa3 li {
-    margin: 2rem 0rem;
-    font-size: 2rem;
-    }
-
-.ul_mapa3 h2 {
-    font-size: 3rem;
-    }    
 
 
 
 
 
-    /*Actividades*/
+ /*---------------Actividades--------------*/
 
-
-    /* MUSCULACION ANIMACION */
-
-.musculacion_sedes{
+.sedes_actividad ul{
     list-style: none;
     }
 
 
-.musculacion_img{
+.img_actividades{
     overflow: hidden;
     width: 50%;
     margin: auto;
@@ -462,7 +379,7 @@ img{
 
     }
 
-.musculacion_img ul {
+.img_actividades ul {
     display: flex;
     width: 300%;
     animation: slide 6s infinite alternate;
@@ -470,139 +387,10 @@ img{
     margin: 0;
     }
 
-.musculacion_img ul li {
+.img_actividades ul li {
     width: 100%;
     list-style: none;
     }
-
-@keyframes slide {
-    0% {margin-left: 0;}
-    33% {margin-left: 0;}
-
-    38% {margin-left: -100%;}
-    68% {margin-left: -100%;}
-    
-    71% {margin-left: -200%;}
-    100% {margin-left: -200%;}
-    }
-
-    
-   
-   
-   
-    /* FUNCIONAL ANIMACION */
-
-.funcional_sedes{
-    list-style: none;
-    }
-
-.funcional_img {
-    overflow: hidden;
-    width: 50%;
-    margin: auto;
-    border: solid rgb(31, 194, 39);
-    }
-
-.funcional_img ul {
-    display: flex;
-    width: 300%;
-    animation: slide 6s infinite alternate;
-    padding: 0;
-    margin: 0;;
-    }
-
-.funcional_img ul li {
-    width: 100%;
-    list-style: none;
-    }
-    
-
-@keyframes slide {
-    0% {margin-left: 0;}
-    33% {margin-left: 0;}
-
-    38% {margin-left: -100%;}
-    68% {margin-left: -100%;}
-    
-    71% {margin-left: -200%;}
-    100% {margin-left: -200%;}
-    }
-
-
-
-
-
-
-
-    /* SPINNING ANIMACION */
-
-.spinning_sedes{
-    list-style: none;
-    }
-.spinning_img{
-    overflow: hidden;
-    width: 50%;
-    margin: auto;
-    border: solid rgb(31, 194, 39);
-    }
-
-.spinning_img ul{
-    display: flex;
-    width: 300%;
-    animation: slide 6s infinite alternate;
-    padding: 0;
-    margin: 0;;
-    }
-
-.spinning_img ul li {
-    width: 100%;
-    list-style: none;
-    }
-    
-
-@keyframes slide {
-    0% {margin-left: 0;}
-    33% {margin-left: 0;}
-
-    38% {margin-left: -100%;}
-    68% {margin-left: -100%;}
-    
-    71% {margin-left: -200%;}
-    100% {margin-left: -200%;}
-    }
-
-
-
-
-
-
-    /* CROSSFIT ANIMACION */
-
-
-.crossfit_sedes{
-    list-style: none;
-    }
-
-.crossfit_img{
-    overflow: hidden;
-    width: 50%;
-    margin: auto;
-    border: solid rgb(31, 194, 39);
-    }
-    
-.crossfit_img ul {
-    display: flex;
-    width: 300%;
-    animation: slide 6s infinite alternate;
-    padding: 0;
-    margin: 0;;
-    }
-
-.crossfit_img ul li {
-    width: 100%;
-    list-style: none;
-    }
-    
 
 @keyframes slide {
     0% {margin-left: 0;}
@@ -625,20 +413,21 @@ img{
     background-color: #1095ca31;
     border: solid 1px;
     }
-.musculacion_texto, .funcional_texto, .spinning_texto, .crossfit_texto{
+
+
+.texto_actividades{
     margin: auto;
 
     }
 
 .titulo_actividad{
     font-size: 5rem;
-    color: rgb(189, 202, 212);
-
+    color: white;
     }
 
 .sedes_actividad{
     margin: auto;
-    color: rgb(189, 202, 212);
+    color: white;
     }
 
 .sedes_actividad ul {
@@ -651,86 +440,17 @@ img{
 
 
 
-/* Media para targetas de carruseles */
-
-@media screen and (max-width:767px) {
-    #carruseles{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows:repeat(2,1fr) ;
-        justify-items:center;
-       }
-       .sedes_actividad ul{
-        row-gap: 1.4rem;
-        font-size: 1.3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: .5rem;
-       }
-       .titulo_actividad{
-        font-size: 4rem;
-        margin-top: 1rem;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-       }
-       #carrusel_actividad{
-        width: 95%;
-        margin-bottom: 3rem;
-       }
-       .musculacion_img, .funcional_img, .spinning_img, .crossfit_img{
-        width: 95%;
-        margin-bottom:1rem;
-        margin-top: 1rem;
-       }
-}
-
-
-@media screen and (max-width:560px) {
-    #carruseles{
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        margin-top: 2rem;
-       }
-       .sedes_actividad ul{
-        row-gap: 1.4rem;
-        font-size: 1.4rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-bottom: 1rem;
-       }
-     
-       .titulo_actividad{
-        font-size: 3rem;
-        margin-top: 2rem;
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-        }
-        .musculacion_img, .funcional_img, .crossfit_img, .spinning_img{
-            width: 100%;
-        }
-
-    }
 
 
 
 
-
-
-
-
-
-
-    /*footer*/
+/*           footer           */
 
 footer {
     text-align: center;
     padding: 1.5rem 1.5rem;
     font-size: 1.4rem;
+    color: rgb(189, 202, 212);
     }
 
 .footer_index {
@@ -739,9 +459,18 @@ footer {
     }
 
 
+
+
     
-/*                   media screen para tablet NAV                      */
-@media screen and (max-width: 1024px){
+/*                       Media screen                  NAV                */
+@media screen and (max-width: 1430px) {
+    #menu ul li a {
+        font-size: 2.5rem;
+        margin: .3rem ;
+        padding:1.2rem .6rem ;
+    }
+}
+@media screen and (max-width: 1100px){
 
     #menu {
         padding: 1.2rem 0rem;
@@ -753,20 +482,28 @@ footer {
     margin: 0.2rem .7rem;
     }
     
-    .ingresar a {
-        font-size: 2rem;
-        margin: 0.2rem;
-        color:rgb(26, 243, 34);
-        padding: .4rem 1rem;
-    }
     .logo{
        min-width:100px;
     }
 
+}
+@media screen and (max-width:950px){
+
+    #menu {
+        padding: 1.2rem 0rem;
     }
 
+    #menu ul li a{
+    font-size: 1.6rem;
+    padding: .4rem;
+    margin: 0.2rem .7rem;
+    }
+    
+    .logo{
+    min-width:100px;
+    }
 
-/*                   media screen para movil  NAV                      */
+}
 @media screen and (max-width: 767px) {
     #menu, .nav {
     display: flex;
@@ -775,26 +512,32 @@ footer {
     padding-bottom: 2rem;
     }
 
-    #menu img {
-    width: 110px;
+    #menu label {
+    margin-right: 2rem;
+    width: 120px;
     height: 70px;
+    margin-bottom: 1rem;
     }
     
     #menu ul li {
-    font-size: 1.4rem;
     padding: .4rem;
     margin: 0.2rem;
     }
 
-    #menu ul li a{
-    padding: .4rem 5rem;
-    border-radius: 2rem;
+    #menu ul {
+    display: none;
+    padding-bottom: 0;
     }
-    
-    .ingresar a {
-    margin: 0.2rem;
-    color:rgb(26, 243, 34);
-    padding: .4rem 5rem;
+
+    #menu ul li a{
+    padding: .4rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.7rem;
+    }
+
+    #menu input:checked ~ ul{
+    display: flex;
+    flex-direction: column;
     }
 }
 /*                       ---------------------------                    */
@@ -807,7 +550,7 @@ footer {
 
 
 
-/*                   media screen para tablet  INDEX                  */
+/*                       Media screen                  INDEX                  */
 @media screen and (max-width: 1024px){
 
     .eslogan{
@@ -876,8 +619,6 @@ footer {
         margin-bottom: 8rem;
     }
 }
-
-/*                   media screen para movil   INDEX                   */
 @media screen and (max-width: 767px) {
 
 
@@ -930,32 +671,26 @@ footer {
 
 
 
+
 /*             media screen para borrar barra CABECERA OTRAS PAGS         */
 @media screen and (max-width: 1400px) {
-    .cabecera_pag h2 {
+    /* .cabecera_pag h2 {
         transform: translatex(30rem);
-    }
-}
-@media screen and (max-width: 1185px) {
-    .cabecera_pag h2 {
-        transform: translatex(40rem);
-    }
+    } */
 }
 @media screen and (max-width: 1090px) {
     .cabecera_pag h2 {
        width: 25rem;
        font-size: 6rem;
-       transform: translatex(20rem);
+       /* transform: translatex(20rem); */
     }
        .cabecera_pag h1 {
         font-size: 4rem;
     }
-  
-     .cabecera_pag p {
+       .cabecera_pag p {
         font-size: 2.1rem;
-     }
+    }
 }
- 
 @media screen and (max-width: 767px) {
     .cabecera_pag {
         overflow: hidden;
@@ -965,42 +700,37 @@ footer {
     }
     .cabecera_pag h2 {
         width: 15rem;
+        transform: translateX(6rem);
         font-size: 3rem;
      }
      .cabecera_pag p {
         font-size: 2rem;
      }
 }
-
 @media screen and (max-width: 670px) {
     .cabecera_pag{
-    margin-top: 2rem;
-    grid-template-rows: 1.3fr 1.2fr;
-    grid-template-columns: 1fr 0rem 1fr;
+        margin-top: 2rem;
+        grid-template-rows: 1.3fr 1.2fr;
+        grid-template-columns: 1fr 1fr;
     }
-
     .cabecera_pag h1 {
         font-size: 3.3rem;
         transform: translateX(1rem);
     }
-
     .cabecera_pag h2 {
         font-size: 3rem;
-        transform: translateX(6rem);
-        margin: 0rem auto;
-     }
+    }
 
-     .cabecera_pag p {
+    .cabecera_pag p {
         font-size: 1.9rem;
         transform: translateX(2rem);
-     }
+    }
 }
-
 @media screen and (max-width: 430px) {
     .cabecera_pag{
-    margin-top: 2rem;
-    grid-template-rows: 1fr 1.2fr;
-    grid-template-columns: 2fr 0rem 1fr;
+        margin-top: 2rem;
+        grid-template-rows: 1fr 1.2fr;
+        grid-template-columns: 2fr 1fr;
     }
 
     .cabecera_pag h1 {
@@ -1009,17 +739,16 @@ footer {
     }
 
     .cabecera_pag h2 {
-        font-size: 2rem;
-        transform: translateX(2rem);
+        font-size: 3rem;
         margin: 0rem auto;
      }
 
-     .cabecera_pag p {
+    .cabecera_pag p {
         font-size: 1.9rem;
         transform: translateX(2rem);
      }
 }
-/*    
+ 
 /*                          ---------------------------                     */
 
 
@@ -1027,7 +756,9 @@ footer {
 
 
 
-/*                   media screen para tablet   GALERIA                  */
+
+
+/*                      Media screen             GALERIA                  */
 @media screen and (max-width: 1024px) {
     .galeria_img{
       width: auto;
@@ -1036,8 +767,6 @@ footer {
       margin: 0rem 1rem;
     }
 }
-
-/*                   media screen para movil GALERIA                      */
 @media screen and (max-width: 767px) {
     .galeria_img{
       display: flex;
@@ -1053,58 +782,69 @@ footer {
 
 
 
-    /*                   media screen para tablet   SEDES             */
-@media screen and (max-width:1115px){
-   
-    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
-        font-size: 2rem;
-      }  
-      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
-        width: 47rem;
-        height: 23rem;
-        margin-left: 4.5rem;
-      }
-    
+    /*                   Media screen               SEDES                */
+@media screen and (max-width:1380px){
+    .iframe_mapa{
+        margin: 1rem 2rem;
+    }
 }
-/*                   media screen para movil   SEDES                   */
-@media screen and (max-width:767px){
-    
-    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
-        font-size: 1.5rem;
-        margin: .5rem;
-        
+@media screen and (max-width:1115px){
+
+    .ul_mapa li{
+        font-size: 2rem;
+        margin: 0;
+        margin-left: 2rem;
       }  
 
-      .ul_mapa1 h2,.ul_mapa2 h2, .ul_mapa3 h2 {
+    .iframe_mapa{
+        width: 47rem;
+        height: 23rem;
+        margin: 0;
+        margin-right: 1rem;
+      }
+
+    .ul_mapa h2{
+        font-size: 3rem;
+        margin-bottom: 3rem;    
+      }    
+}
+@media screen and (max-width:767px){
+  
+    .ul_mapa li{
+        font-size: 1.5rem;
+        margin: .5rem;
+      }  
+
+      .ul_mapa h2{
         font-size: 2.5rem;       
       } 
 
-      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
+      .iframe_mapa{
         width: 37rem;
+        margin: 0;
         height: 20rem;
-
       }
     
 }
 @media screen and (max-width:630px){ 
     
-    .mapa1, .mapa2, .mapa3{
+    .info_mapa{
         display: flex;
         flex-direction: column;
         justify-items: center;
         text-align: center;
     }
 
-    .ul_mapa1 li,.ul_mapa2 li, .ul_mapa3 li {
+    .ul_mapa li{
         font-size: 1.6rem;
         margin: .1rem;
       }  
 
-      .ul_mapa1 h2,.ul_mapa2 h2, .ul_mapa3 h2 {
+      .ul_mapa h2{
         font-size: 2.1rem;  
       } 
 
-      .iframe_mapa1, .iframe_mapa2, .iframe_mapa3 {
+      .iframe_mapa{
         width: 80%;
         margin: 0rem auto;
         margin-bottom: 1rem;
@@ -1122,7 +862,7 @@ footer {
 
 
 
-/*                   media screen para movil   CUENTA                   */
+/*                      Media screen               CUENTA                */
 @media screen and (max-width:524px){
     #form_section{
         justify-content: center;
@@ -1131,4 +871,70 @@ footer {
         width: 35rem;
     }
 }
-/*                       ---------------------------                    */
+/*                       ---------------------------                     */
+
+
+
+
+/*                       Media screen             ACTIVIDADES                 */
+@media screen and (max-width:767px) {
+    #carruseles{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr) ;
+        justify-items:center;
+       }
+       .sedes_actividad ul{
+        row-gap: 1.4rem;
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: .5rem;
+       }
+       .titulo_actividad{
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+       }
+       #carrusel_actividad{
+        width: 95%;
+        margin-bottom: 3rem;
+       }
+       .img_actividades{
+        width: 95%;
+        margin-bottom:1rem;
+        margin-top: 1rem;
+       }
+}
+@media screen and (max-width:560px) {
+    #carruseles{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 2rem;
+       }
+       .sedes_actividad ul{
+        row-gap: 1.4rem;
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+       }
+     
+       .titulo_actividad{
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        }
+        .img_actividades{
+            width: 100%;
+        }
+
+}
+/*                      ---------------------------                     */ 

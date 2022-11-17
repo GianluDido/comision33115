@@ -816,26 +816,7 @@ footer {
         justify-content: center;
        }
        #carrusel_actividad{
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        width: 95%;
         margin-bottom: 3rem;
        }
        .img_actividades{
@@ -844,6 +825,7 @@ footer {
         margin-top: 1rem;
        }
 }
+
 @media screen and (max-width:560px) {
     #carruseles{
         display: flex;

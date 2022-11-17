@@ -1,127 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades - Gem GYM</title>
     <link rel="icon" href="../img/otro.ico">
-    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Se agrega el CSS-->
 </head>
+<body style="background-image: url(img/prism.png); height: 1vh;">    <!--agrego Style en linea porque background-image-->
 
-<body>
     <header> <!--CABECERA-->
-        <div class="actvidades_nav"> 
-            <nav id="menu">
-                <img src="../img/logo1.png" alt="" class="logo">
-                <ul class="nav"> 
-                  <li><a href="../index.html">HOME</a> </li>
-                  <li><a href="galeria.html">GALERIA</a> </li>
-                  <li><a href="actividades.html">ACTIVIDADES</a> </li>
-                  <li><a href="suplementacion.html">SUPLEMENTACIÓN</a> </li>
-                  <li><a href="sedes.html">SEDES</a> </li>
-               </ul>
-               <div class="ingresar"><a href="Cuenta.html">INGRESAR</a></div>
-            </nav>
-          </div>
-        
-   </header>
+      <div class="actvidades_nav "> 
+        <nav id="menu">
+          <input type="checkbox" id="input_logo">
+          <label class="logo" for="input_logo"><img src="../img/logo1.png" alt="logo GemGym" ></label>
+            <ul class="nav"> 
+              <li><a href="../index.html">HOME</a> </li>
+              <li><a href="galeria.html">GALERIA</a> </li>
+              <li><a href="actividades.html">ACTIVIDADES</a> </li>
+              <li><a href="suplementacion.html">SUPLEMENTACIÓN</a> </li>
+              <li><a href="sedes.html">SEDES</a> </li>
+              <li><a href="Cuenta.html">INGRESAR</a></li>
+           </ul>
+        </nav>
+      </div>
+    </header>
 
 
 
- <main class="mainindex"> <!--CONTENIDO PRINCIPAL-->
-    <section class="cabecera_pag">
+ <main id="main_actividades"> <!--CONTENIDO PRINCIPAL-->
+    <div class="container mt-5">
+     <section class="cabecera_pag" >
         <h1>GemGym</h1>
         <p>Encontramos tu verdadero valor </p>   <h2>Actividades</h2>
+      </section>
+    </div>  
 
-       <hr class="pages_hr">
+ 
+
+
+  <section id="carruseles" class="container-xl"> <!--Container para bootstrap de los carruseles -->
+   
+   
+    <!--MUSCULACION-->
+    <section id="carrusel_actividad" class="row mt-5  bg-opacity-25 ">
+
+      <div class="texto_actividades col-xl-4 col-md-4 "><!--columna principal-->
         
-      </div>
-     </section>
-
-        <!--MUSCULACION-->
-    <section class="carrusel_musculacion">
-      <div class="musculacion">
-        <h2>Musculación</h2>
-        <ul>
+        <div class="row">
+          <h2 class="titulo_actividad">Musculación</h2><!--Titulo de Actividad-->
+        </div>
+      
+         <div class="row sedes_actividad">
+          <ul> <!--lista de sedes-->
           <li>Sede del Sur</li>
           <li>Sede del Norte</li>
           <li>Sede del centro</li>
+          </ul>
+         </div>
+      </div>
+      
+      <div class="img_actividades col-xl-8 p-0 ">           <!--carrusel de img-->
+        <ul>
+          <li> <img src="../img/negro.png" alt=""> </li>
+          <li> <img src="../img/blanco.jpg" alt=""> </li>
+          <li> <img src="../img/rosa.jpg" alt=""> </li>
         </ul>
       </div>
 
-      <div class="musculacion_img">
-        <img src="../img/negro.png" alt="">
-        <img src="../img/blanco.jpg" alt="">
-        <img src="../img/rosa.jpg" alt="">
-      </div>
     </section>
 
 
 
         <!--FUNCIONAL-->
-    <section class="carrusel_funcional">
-      <div class="funcional">
-        <h2>Funcional</h2>
-        <ul>
+    <section id="carrusel_actividad" class="row mt-5 bg-opacity-25">
+      
+      <div class="texto_actividades col-xl-4 col-md-4"><!--columna principal-->
+        
+        <div class="row"><!--Titulo Actividad-->
+          <h2 class="titulo_actividad">Funcional</h2>
+        </div>
+
+        <div class="row sedes_actividad"> <!--lista de sedes-->
+          <ul class="funcional_sedes">
           <li>Sede del Sur</li>
           <li>Sede del Norte</li>
           <li>Sede del centro</li>
-        </ul>
+          </ul>
+        </div>
       </div>
 
-      <div class="funcional_img">
-        <img src="../img/negro.png" alt="">
-        <img src="../img/blanco.jpg" alt="">
-        <img src="../img/rosa.jpg" alt="">
-      </div>
+        <div class="img_actividades col-xl-8 p-0">  <!--carrusel de img-->
+          <ul>
+            <li> <img src="../img/negro.png" alt=""> </li>
+            <li> <img src="../img/blanco.jpg" alt=""> </li>
+            <li> <img src="../img/rosa.jpg" alt=""> </li>
+          </ul>
+        </div>
     </section>
+
 
 
 
         <!--SPINNING-->
-    <section class="carrusel_spinning">
-      <div class="spinning">
-        <h2>Spinning</h2>
-        <ul>
-          <li>Sede del Sur</li>
-          <li>Sede del Norte</li>
-          <li>Sede del centro</li>
-        </ul>
+    <section id="carrusel_actividad" class="row mt-5 bg-opacity-25">
+     
+      <div class="texto_actividades col-xl-4 col-md-4 "><!--columna principal-->
+        
+        <div class="row"> <!--Titulo Actividad-->
+          <h2 class="titulo_actividad">Spinning</h2>
+        </div>  
+
+        <div class="row sedes_actividad"> <!--lista de sedes-->
+         <ul> 
+           <li>Sede del Sur</li>
+           <li>Sede del Norte</li>
+           <li>Sede del centro</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="spininng_img">
-        <img src="../img/negro.png" alt="">
-        <img src="../img/blanco.jpg" alt="">
-        <img src="../img/rosa.jpg" alt="">
-      </div>
+        <div class="img_actividades col-xl-8 p-0 ">  <!--carrusel de img-->
+          <ul>
+            <li> <img src="../img/negro.png" alt=""> </li>
+            <li> <img src="../img/blanco.jpg" alt=""> </li>
+            <li> <img src="../img/rosa.jpg" alt=""> </li>
+          </ul>
+        </div>
     </section>
+
 
 
 
         <!--CROSSFIT-->
-    <section class="carrusel_crossfit">
-      <div class="crossfit">
-        <h2>Crossfit</h2>
-        <ul>
-          <li>Sede del Sur</li>
-          <li>Sede del Norte</li>
-          <li>Sede del centro</li>
-        </ul>
-      </div>
+    <section id="carrusel_actividad" class="row mt-5 bg-opacity-25">
+      
+      <div class="texto_actividades col-xl-4 col-md-4  "><!--columna principal-->
+        
+        <div class="row"> <!--Titulo Actividad-->
+          <h2 class="titulo_actividad">Crossfit</h2>
+        </div>
 
-      <div class="crossfit_img">
-        <img src="../img/negro.png" alt="">
-        <img src="../img/blanco.jpg" alt="">
-        <img src="../img/rosa.jpg" alt="">
+        <div class="row sedes_actividad"> <!--lista de sedes-->
+          <ul>
+            <li>Sede del Sur</li>
+            <li>Sede del Norte</li>
+            <li>Sede del centro</li>
+          </ul>
+        </div>
+
       </div>
+  
+        <div class="img_actividades col-xl-8 p-0 ">  <!--carrusel de img-->
+          <ul>
+            <li> <img src="../img/negro.png" alt=""> </li>
+            <li> <img src="../img/blanco.jpg" alt=""> </li>
+            <li> <img src="../img/rosa.jpg" alt=""> </li>
+          </ul>
+        </div>
     </section>
+
+  </section>
+</main>
+
+
 
 
 
    <footer> <!--Pie de Pagina-->
     <p>Copyright 2022 © Todos los Derechos Reservados. Diseñado por GianDido</p>
 </footer>
+
+<!-- Java de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 </html>

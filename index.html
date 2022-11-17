@@ -6,38 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gem Gym</title>
     <link rel="icon" href="img/otro.ico">
+   
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/styles.css"> <!-- Se agrega el CSS-->
 
 
 </head>
 
-<body>
-    <header class="heder"> <!--CABECERA-->
+<body style="background-image: url(img/prism.png); height: 1vh;">    <!--agrego Style en linea porque background-image-->
+    
+  <header class="heder"> <!--CABECERA-->
        <nav id="menu">
-        <img src="../Codigo/img/logo1.png" alt="" class="logo">
-        <ul class="nav"> 
-            
+        <input type="checkbox" id="input_logo">
+        <label class="logo" for="input_logo"><img src="img/logo1.png" alt="logo GemGym" ></label>
+
+         <ul class="nav"> 
             <li><a href="index.html">HOME</a></li>
             <li><a href="pages/galeria.html">GALERIA</a></li>
             <li><a href="pages/actividades.html">ACTIVIDADES</a></li>
             <li><a href="pages/suplementacion.html">SUPLEMENTACIÓN</a></li>
             <li><a href="pages/sedes.html">SEDES</a></li>
-        </ul>
-        <div class="ingresar"><a href="pages/Cuenta.html">INGRESAR</a></div>
+            <li><a href="pages/Cuenta.html">INGRESAR</a></li>
+         </ul>
       </nav>     
     </header>
 
-   <main> <!--contenido principal de la pagina--> 
+   <main class="main_index"> <!--contenido principal de la pagina--> 
      <section class="eslogan">
             <h1>GemGym</h1> <!--Nombre de la pagina-->
             
             <h2>Encontramos tu verdadero valor </h2>
             
-            <img src="../Codigo/img/capucha.png" alt=""> 
+            <img src="img/capucha.png" alt="Frase Motivadora"> 
      </section>
-        
- <br>
- <hr class="index_hr">     
+     
     
     <section class="descripcion">
             
@@ -54,13 +59,24 @@
                 </p>
             </div>
             
-             <hr class="index_hr">
+
 
             <div class="descripcion_img">
+             
+              <div class="staff">
+                <img src="img/equipo.png" >  
+                 <p >Staff de GemGym</p>
+              </div>
+
+              <div class="prensa">
+                <img src="img/prensa.png">  
+                <p >Sala de Musculacion</p>
+              </div>
               
-              <img src="img/equipo.png" class="staff_img"><p class="staff">Staff de GemGym</p> 
-              <img src="img/prensa.png" class="prensa_img"><p class="prensa">Sala de Musculacion</p>                   
-              <img src="img/cardio.png" class="cardio_img"><p class="cardio">Sala para Cardio</p> 
+              <div class="cardio">
+                <img src="img/cardio.png">  
+                <p >Sala para Cardio</p>
+              </div>
             </div>
         
      </section>
@@ -69,6 +85,9 @@
  <footer class="footer_index"> <!--Pie de Pagina-->
          <p>Copyright 2022 © Todos los Derechos Reservados. Diseñado por GianDido</p>
  </footer>
+ 
+ <!-- Java de Bootstrap -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 </html>

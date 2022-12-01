@@ -1,0 +1,206 @@
+/*--------------------INDEX / HOME--------------------*/
+
+.eslogan {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr ;
+    grid-template-rows:  0.1fr 1fr;
+    grid-template-areas: 
+    "nombre imagen"
+    "eslogan imagen";
+    background-color: rgba(0, 0, 0, 0.247);
+    padding: 5rem 0rem;
+ 
+  
+     }
+ 
+ .eslogan h1 {                       /*GemGym */
+     font-size: 6rem;
+     color: #1cb056;
+     grid-area: nombre;
+     margin-left: 3rem;
+     }
+ 
+ .eslogan h2 {                       /*Encontramos tu valor*/
+     font-size: 3.5rem;
+     color: #119cd3;
+     grid-area: eslogan;
+     margin-left: 6rem;
+     }
+ 
+  .eslogan img {                       /*frase motivadora*/
+     border: solid 0.2rem ;
+     grid-area: imagen;
+     }
+ 
+ 
+ .descripcion_p {
+     display: flex;
+     color: rgb(189, 202, 212);
+     flex-direction: column;
+     margin: 8rem 30rem;
+     text-align: center;
+     gap: 5em;
+     }
+ 
+ .descripcion_p1 {                     /*parrafo largo abajo de la imagen*/
+     font-size: 2.5rem;
+     }
+ 
+ .descripcion_p2 {                      /*parrafo para inscribirse*/
+     font-size: 2.2rem;
+     font-weight: bolder;
+     }
+ 
+ .descripcion_img {                     /* Div Imagenes y Subtitulos*/
+     margin-top: 10rem;
+     display: grid;
+     grid-template-areas: 
+     "cardio staff prensa";
+     justify-items: center;
+     row-gap: 1rem;
+     column-gap: 0.8rem;
+     margin: 0rem 1rem;
+     color: rgb(189, 202, 212);
+ }
+ 
+ .staff{
+     grid-area:staff;
+ }
+ .cardio{
+     grid-area:cardio;
+ }
+ .prensa{
+     grid-area:prensa;
+ }
+ 
+ .descripcion_img img {                /*imagenes de los sectores*/
+     width: 100%;
+     height: 100%;
+ 
+     border: solid 0.2rem black;
+ 
+     }
+ .descripcion_img p {
+     text-align: center;
+     font-size: 2rem;
+     }
+ 
+ 
+ 
+ 
+ 
+ 
+/*                       Media screen            INDEX                  */
+@media screen and (max-width: 1024px){
+
+    .eslogan{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .eslogan h1 {                       /*GemGym */
+        font-size: 4rem;
+        color: #1cb056;
+        grid-area: nombre;
+
+            }
+    
+    .eslogan h2 {                       /*Encontramos tu valor*/
+        font-size: 3rem;
+        color: #119cd3;
+        grid-area: eslogan;
+
+        }
+    .index_hr{
+        margin: 0rem;
+        width: 100%;
+     }
+     .descripcion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+     }
+
+     .descripcion_p {
+        margin: 7rem 3rem;
+    }
+    .descripcion_img{
+        display: grid;
+        grid-template-areas:
+        "staff prensa"
+        "cardio cardio";
+        grid-template-rows: repeat(2, 400px);
+    }
+
+    .staff {
+        grid-area:staff;
+        max-height: 30rem;
+    }
+
+    .prensa {
+        grid-area:prensa;
+        max-height: 30rem;
+    }
+
+    .cardio {
+        grid-area:cardio;
+        max-width: 60rem;
+    }
+
+    .descripcion_img div img {
+        width: 90%;
+        height: 90%;
+
+    }
+
+    .descripcion_img div p {
+        font-size: 2.4rem;
+        margin-bottom: 8rem;
+    }
+}
+@media screen and (max-width: 767px) {
+
+
+    .eslogan{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .eslogan h1{
+        font-size:5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .eslogan h2{
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+    
+    .descripcion_p {
+        margin: 6rem 3rem;
+    }
+    .descripcion_p1, .descripcion_p2{
+        font-size: 2rem;
+    }
+    .descripcion_img{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        align-items: center;
+        justify-items: center;
+        row-gap: 3rem;
+    }
+    .descripcion_img div img  {
+        max-width: 50rem;
+    }
+
+    .descripcion_img div p {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+}
+/*                      ---------------------------                     */ 

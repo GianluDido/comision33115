@@ -1,0 +1,142 @@
+/*--------------------NAV*--------------------*/
+
+.nav {
+    grid-area: nav;
+    }
+
+.logo {
+    grid-area: logo;
+    width: 65%;
+    margin: 0.5rem 0rem;
+    width:100px;
+    justify-self: left !important;    
+    }
+    
+#menu {
+    display: grid;
+    grid-template-columns: .5fr 2fr 10fr;
+    grid-template-areas: 
+    ". logo nav";   
+    border-bottom: solid #1cb056 0.1rem;
+    background-color: #161616;
+    justify-items: right;
+    align-items: center;
+    width: 100%;
+    padding: 1.2rem 0rem;
+
+    }
+
+ #menu ul {
+    display: flex;
+    list-style: none;
+    margin-right: 2rem;
+    }
+
+ #menu ul li a {
+    color: #1cb056;
+    text-decoration: none;
+    display: block;
+    padding: 1.8rem 1.5rem ;
+    font-size: 3rem;
+    margin: 0rem 0.7rem;
+    }
+
+#menu ul li:nth-child(6) a{
+    color:rgb(26, 243, 34);
+    }
+
+ #menu ul li a:hover {
+    color: #119cd3;
+    border-radius: .4rem;
+    background-color:rgba(255, 255, 255, 0.048);
+    }
+
+#input_logo {
+    display: none;
+    }
+
+
+
+
+
+
+
+/*                       Media screen                  NAV                */
+@media screen and (max-width: 1430px) {
+    #menu ul li a {
+        font-size: 2.5rem;
+        margin: .3rem ;
+        padding:1.2rem .6rem ;
+    }
+}
+@media screen and (max-width: 1100px){
+
+    #menu {
+        padding: 1.2rem 0rem;
+    }
+
+    #menu ul li a{
+    font-size: 2rem;
+    padding: .4rem;
+    margin: 0.2rem .7rem;
+    }
+    
+    .logo{
+       min-width:100px;
+    }
+
+}
+@media screen and (max-width:950px){
+
+    #menu {
+        padding: 1.2rem 0rem;
+    }
+
+    #menu ul li a{
+    font-size: 1.6rem;
+    padding: .4rem;
+    margin: 0.2rem .7rem;
+    }
+    
+    .logo{
+    min-width:100px;
+    }
+
+}
+@media screen and (max-width: 767px) {
+    #menu, .nav {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    padding-bottom: 2rem;
+    }
+
+    #menu label {
+    margin-right: 2rem;
+    width: 120px;
+    height: 70px;
+    margin-bottom: 1rem;
+    }
+    
+    #menu ul li {
+    padding: .4rem;
+    margin: 0.2rem;
+    }
+
+    #menu ul {
+    display: none;
+    padding-bottom: 0;
+    }
+
+    #menu ul li a{
+    padding: .4rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.7rem;
+    }
+
+    #menu input:checked ~ ul{
+    display: flex;
+    flex-direction: column;
+    }
+}
+/*                       ---------------------------                    */

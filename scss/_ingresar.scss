@@ -1,0 +1,62 @@
+/*--------------------INGRESAR--------------------*/
+
+#form_section {
+    margin-top: 18rem;
+    display: grid;
+    grid-template-areas: 
+    "none form none"
+    }
+    
+.form {               /*  DIV DEL FORM    */
+    grid-area: form;
+    width: 50rem;
+    height: 40rem;
+    border: solid #119cd3 .2rem;
+    background-color: #1d363f;
+    border-radius: 2rem;
+    }
+    
+.form form {           /*  FORMULARIO    */
+ display: flex;
+ flex-direction: column;
+ row-gap: .7rem;
+ align-items: center;
+    }
+
+.form p {              /*  INICIAR SESION     */
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0rem;     
+    color: #158140;
+    font-weight: bolder;
+    }
+    
+.form input{            /*  INGRESAR DATOS, FORM     */
+    width: 90%;
+    padding: 1rem;
+    background:none;
+    font-size: 2rem;
+    border: solid;
+    border-color: #119cd3;
+    border-radius: .7rem;
+    color: #119cd3;
+  
+    }
+    
+#enviarForm {            /*  BOTON INGRESAR     */
+    margin-top: 1.4rem;
+    background-color: #0b6285;
+    border: hidden;
+    color: black;
+    }
+
+    /*                      Media screen               CUENTA                */
+@media screen and (max-width:524px){
+    #form_section{
+        justify-content: center;
+    }
+    .form{
+        width: 35rem;
+    }
+}
+/*                       ---------------------------                     */

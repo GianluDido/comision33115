@@ -24,32 +24,29 @@
     width: 100%;
     padding: 1.2rem 0rem;
 
+    ul {
+     display: flex;
+     margin-right: 2rem;
+    
+    li:nth-child(6) a{
+     color:rgb(26, 243, 34);
     }
-
- #menu ul {
-    display: flex;
-    list-style: none;
-    margin-right: 2rem;
+   
+    li a {
+     color: #1cb056;
+     display: block;
+     padding: 1.8rem 1.5rem ;
+     font-size: $fuente-m;
+     margin: 0rem 0.7rem;
     }
-
- #menu ul li a {
-    color: #1cb056;
-    text-decoration: none;
-    display: block;
-    padding: 1.8rem 1.5rem ;
-    font-size: 3rem;
-    margin: 0rem 0.7rem;
+    
+    a:hover {
+     color: #119cd3;
+     border-radius: .4rem;
+     background-color:rgba(255, 255, 255, 0.048);
     }
-
-#menu ul li:nth-child(6) a{
-    color:rgb(26, 243, 34);
-    }
-
- #menu ul li a:hover {
-    color: #119cd3;
-    border-radius: .4rem;
-    background-color:rgba(255, 255, 255, 0.048);
-    }
+  } 
+}
 
 #input_logo {
     display: none;
@@ -64,79 +61,73 @@
 /*                       Media screen                  NAV                */
 @media screen and (max-width: 1430px) {
     #menu ul li a {
-        font-size: 2.5rem;
-        margin: .3rem ;
-        padding:1.2rem .6rem ;
+     font-size: $fuente-s;
+     margin: .3rem ;
+     padding:1.2rem .6rem ;
     }
 }
 @media screen and (max-width: 1100px){
 
     #menu {
-        padding: 1.2rem 0rem;
+    padding: 1.2rem 0rem;
+     
+    ul li a{
+     font-size: $fuente-xs;
+     padding: .4rem;
+     margin: 0.2rem .7rem;
     }
-
-    #menu ul li a{
-    font-size: 2rem;
-    padding: .4rem;
-    margin: 0.2rem .7rem;
-    }
-    
+  }
     .logo{
-       min-width:100px;
-    }
-
+     min-width:100px;
+  }
 }
+
 @media screen and (max-width:950px){
 
     #menu {
-        padding: 1.2rem 0rem;
-    }
-
-    #menu ul li a{
-    font-size: 1.6rem;
-    padding: .4rem;
-    margin: 0.2rem .7rem;
-    }
+    padding: 1.2rem 0rem;
     
-    .logo{
-    min-width:100px;
+    ul li a{
+     padding: .4rem;
+     margin: 0.2rem .7rem;
     }
+  }
+    .logo{
+     min-width:100px;
+  }
 
 }
+
 @media screen and (max-width: 767px) {
     #menu, .nav {
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    padding-bottom: 2rem;
-    }
-
-    #menu label {
-    margin-right: 2rem;
-    width: 120px;
-    height: 70px;
-    margin-bottom: 1rem;
+     @include flex-column;  
+     align-items: center;
+     padding-bottom: 2rem;
+    
+    label {
+     margin-right: 2rem;
+     @include ancho-alto(12rem,7rem);
+     margin-bottom: 1rem;
     }
     
-    #menu ul li {
-    padding: .4rem;
-    margin: 0.2rem;
+    ul li {
+     padding: .4rem;
+     margin: 0.2rem;
     }
 
-    #menu ul {
-    display: none;
-    padding-bottom: 0;
+    ul {
+     display: none;
+     padding-bottom: 0;
     }
 
-    #menu ul li a{
-    padding: .4rem 3rem;
-    border-radius: 2rem;
-    font-size: 1.7rem;
+    ul li a{
+     padding: .4rem 3rem;
+     border-radius: 2rem;
     }
 
-    #menu input:checked ~ ul{
-    display: flex;
-    flex-direction: column;
+    input:checked ~ ul{
+     @include flex-column; 
     }
+  }
 }
 /*                       ---------------------------                    */

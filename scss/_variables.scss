@@ -1,0 +1,34 @@
+//Variables 
+$bg-color: #119cd367;
+
+$bg-image: url(../img/prism.png);
+
+$fuente-global:'Calibri';
+
+$fuente-xs: 1.4rem;
+$fuente-s: 2.2rem;
+$fuente-m: 3.3rem;
+$fuente-l: 5rem;
+$fuente-xl: 6.3rem;
+
+
+// Mixins
+@mixin ancho-alto($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center-items {
+    align-items: center;
+    justify-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}

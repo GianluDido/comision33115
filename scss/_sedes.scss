@@ -1,8 +1,7 @@
 /*--------------------Sedes--------------------*/
 
 #mapas {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     row-gap: 10rem;
     }
 
@@ -15,15 +14,13 @@
     border-top: solid 1px rgb(93, 190, 185);
     border-bottom: solid 1px rgb(93, 190, 185);
     grid-template-columns: 1fr 2fr ;
-    justify-items: center;
-    align-items: center;
+    @include center-items;
     background-color: rgba(255, 255, 255, 0.089);
     }
 
 .iframe_mapa {
     grid-area: mapa;
-    width: 67rem;
-    height: 38rem;
+    @include ancho-alto(67rem, 38rem);
     border-radius: 1rem;
     margin: 1rem 15rem 1rem 0rem;
     justify-self: right;
@@ -31,94 +28,82 @@
 
 .ul_mapa {
     grid-area: info;
-    list-style: none;
     color: white;
-    }
     
-.ul_mapa li {
-    margin-left: 5rem;
-    font-size: 2rem;
+    li {
+        margin-left: 5rem;
+        font-size: $fuente-s;
     }
 
-.ul_mapa li:not(:last-of-type) {
-    margin-bottom: 2rem ;
+    li:not(:last-of-type) {
+        margin-bottom: 2rem ;
     }
 
-.ul_mapa h2 {
-    font-size: 5rem;
+    h2 {
+        font-size: $fuente-l;
     }
+}
 
 
 
 
-    /*                   Media screen               SEDES                */
-    @media screen and (max-width:1380px){
+/*                   Media screen               SEDES                */
+@media screen and (max-width:1380px){
         .iframe_mapa{
             margin: 1rem 2rem;
         }
     }
-    @media screen and (max-width:1115px){
+@media screen and (max-width:1115px){
     
         .ul_mapa li{
-            font-size: 2rem;
             margin: 0;
             margin-left: 2rem;
+            h2{
+             font-size: $fuente-m;
+             margin-bottom: 3rem;    
+            }    
           }  
     
         .iframe_mapa{
-            width: 47rem;
-            height: 23rem;
+            @include ancho-alto(47rem, 23rem);
             margin: 0;
             margin-right: 1rem;
           }
-    
-        .ul_mapa h2{
-            font-size: 3rem;
-            margin-bottom: 3rem;    
-          }    
     }
-    @media screen and (max-width:767px){
+
+@media screen and (max-width:767px){
       
-        .ul_mapa li{
-            font-size: 1.5rem;
+    .ul_mapa{
+        li{
+            font-size: $fuente-xs;
             margin: .5rem;
-          }  
-    
-          .ul_mapa h2{
-            font-size: 2.5rem;       
-          } 
-    
-          .iframe_mapa{
-            width: 37rem;
-            margin: 0;
-            height: 20rem;
-          }
-        
+        }  
+        h2{
+            font-size: $fuente-s;
+        } 
     }
-    @media screen and (max-width:630px){ 
-        
-        .info_mapa{
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            text-align: center;
-        }
     
-        .ul_mapa li{
-            font-size: 1.6rem;
-            margin: .1rem;
-          }  
-    
-          .ul_mapa h2{
-            font-size: 2.1rem;  
-          } 
-    
-          .iframe_mapa{
-            width: 80%;
-            margin: 0rem auto;
-            margin-bottom: 1rem;
-          }
-        
-    
+    .iframe_mapa{
+        @include ancho-alto(37rem, 20rem);
+        margin: 0;
+    }    
+}
+
+@media screen and (max-width:630px){ 
+    .info_mapa{
+        @include flex-column;
+        justify-items: center;
+        text-align: center;
     }
+    
+    .ul_mapa li{ 
+        margin: .1rem;
+    }
+
+  .iframe_mapa{
+        width: 80%;
+        margin: 0rem auto;
+        margin-bottom: 1rem;
+    }
+}
     /*                       ---------------------------                    */

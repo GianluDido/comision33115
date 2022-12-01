@@ -1,11 +1,26 @@
 @import"variables";
 @import"globales";
 @import"nav";
+@import"ingresar";
 @import"index";
 @import"cabecera-paginas";
 @import"galeria";
 @import"sedes";
 @import"actividades";
 @import"suplementacion";
-@import"ingresar";
+
+
+    /*           footer           */
+
+    footer {
+        text-align: center;
+        padding: 1.5rem 1.5rem;
+        font-size: 1.4rem;
+        color: rgb(189, 202, 212);
+        }
+    
+    .footer_index {
+        text-align: center;
+        padding-top: 15rem;
+        }
 

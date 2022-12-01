@@ -4,27 +4,27 @@
     }  
 
 html {    
-    font-size: 62.5%; /*1rem = 10px*/
-    font-family: 'Calibri';
-   background-image: url(../img/prism.png);    
+   font-size: 62.5%; /*1rem = 10px*/
+   font-family: $fuente-global;
+   background-image: $bg-image;    
    background-blend-mode:hard-light;
-   background-color: #119cd367;
+   background-color: $bg-color;
+    }
+
+ul{
+ list-style: none;
+    }
+
+li{
+ text-decoration: none;  
+    }
+
+a{
+ text-decoration: none;
     }
 
 img{
     max-width: 100%;
     }
 
-    /*           footer           */
 
-footer {
-    text-align: center;
-    padding: 1.5rem 1.5rem;
-    font-size: 1.4rem;
-    color: rgb(189, 202, 212);
-    }
-
-.footer_index {
-    text-align: center;
-    padding-top: 15rem;
-    }

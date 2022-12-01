@@ -8,42 +8,42 @@
     grid-template-columns: 1fr  1fr;
     width: 100%;
     
+    h1{
+      grid-area: gem;
+      font-size: $fuente-l;
+      color: #1cb056;
     }
 
-.cabecera_pag h1{
-    grid-area: gem;
-    font-size: 5rem;
-    color: #1cb056;
+    p{
+      font-size: $fuente-m;
+      color: #119cd3;
+      grid-area: eslogan;
+      transform: translatex(10%);
     }
 
-.cabecera_pag p {
-    font-size: 3rem;
-    color: #119cd3;
-    grid-area: eslogan;
-    transform: translatex(10%);
+    h2{
+      font-size: $fuente-l;
+      grid-area: nombre;
+      color:rgb(255, 255, 255);
+      font-weight: bold;
+      justify-self: right;
     }
+}
 
-.cabecera_pag h2{
-    font-size: 5rem;
-    grid-area: nombre;
-    color:rgb(255, 255, 255);
-    font-weight: bold;
-    justify-self: right;
-    }
-
-    
 /*                       Media screen            Cabecera Pags                  */
 
 @media screen and (max-width: 767px) {
 
-    .cabecera_pag h2{
-       font-size: 3rem;
-   }
-   .cabecera_pag h1{
-       font-size: 5rem;
-   }
-   .cabecera_pag p{
-       font-size: 2rem;
-   }
+  .cabecera_pag{
+    h2{
+      font-size: $fuente-m;
+     }
+    h1{
+      font-size: $fuente-l;
+    }
+    p{
+      font-size: $fuente-s;
+    }
+  }
 }
 /*                      ---------------------------                     */ 

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gym, proteina, bcaa, creatina, suplementos, fitness, gimnasio, ejercicio, entrenar, categorias">
+    <meta name="description" content="Bienvenido al E-Commerce de GemGym, contamos con todos los suplementos principales necesarios 
+    para mejorar el rendimiento en tus entrenamientos">
+
     <title>Suplementacion - Gem GYM</title>
     <link rel="icon" href="../img/otro.ico">
     
@@ -41,121 +45,106 @@
         <p>Encontramos tu verdadero valor </p>   <h2>Suplementación</h2>
       </section>
     </div>
-  
+      <section id="contenidosup">
+          
+            <section class="TODO">
+              
 
-     <section id="busqueda">
-      <input type="text" placeholder="Buscar" required>
-     </section>
-
-      <section id="Categorias">
-        <ul class="filtro">
-          
-          <h2>Elegir Categoria</h2>
-
-          <li><input type="radio" id="todo" name="suplementos" checked><label for="todo">Todos</label></li>
-          
-          
-          <li><input type="radio" id="proteina" name="suplementos"><label for="proteina">Proteína</label></li>
-          
-          
-          <li><input type="radio" id="creatina" name="suplementos"><label for="creatina">Creatina</label></li>
-          
-          
-          <li><input type="radio" id="bcaa" name="suplementos"><label for="bcaa">BCAA</label></li>
-          
-        </ul> 
-      </section>
-
-    <section id="articulos">
+              <input type="radio" id="todo"name="suplementos" checked/> <!--boton todo / no se me autocomplete con el checked en firefox-->
+              <input type="radio" id="proteina" name="suplementos" value="pro"> <!--boton proteina-->
+              <input type="radio" id="creatina" name="suplementos" value="crea"> <!--boton creatina-->             
+              <input type="radio" id="bcaa" name="suplementos" value="bcaa"> <!--boton bcaa-->
          
-          <!-------Proteina------->
-      <div class="articulos_proteina">  
-       
-        <div>
-          <h2>producto_proteina1</h2>
-          <img src="../img/prote.png" alt="">
-          <p>COMPRAR</p>
-        </div>
-        
-        <div>
-          <h2>producto_proteina2</h2>
-          <img src="../img/prote1.png" alt="">
-          <p>COMPRAR</p>
-        </div>
-        
-        <div>
-          <h2>producto_proteina3</h2>
-          <img src="../img/prote2.png" alt=""> 
-          <p>COMPRAR</p>
-        </div>
-        
-        <div>
-          <h2>producto_proteina4</h2>
-          <img src="../img/prote3.png" alt=""> 
-          <p>COMPRAR</p>
-        </div>
-      </div>
+            <div class="labels">
+              
+              <h2 name="suplementos">Elegir Categoria</h2>
+              <label for="todo">Todos</label>
+              <label for="proteina">Proteína</label>
+              <label for="creatina">Creatina</label>
+              <label for="bcaa">BCAA</label>
+            </div>
 
-
-          <!------Creatina------->
-      <div class="articulos_creatina">
+          <section id="tarjetas"> 
+          <!------------Proteina---------->
+            
+            <div class="card_proteina tarjeta ">
+                <h2>producto_proteina1</h2>
+                <img src="../img/prote.png" alt="">
+                <button>COMPRAR</button>
+            </div>
+              
+            <div class="card_proteina tarjeta">
+              <h2>producto_proteina2</h2>
+              <img src="../img/prote1.png" alt="">
+              <button>COMPRAR</button>
+            </div>
+              
+            <div class="card_proteina tarjeta">
+              <h2>producto_proteina3</h2>
+              <img src="../img/prote2.png" alt=""> 
+              <button>COMPRAR</button>
+            </div>
         
-        <div>
-          <h2>producto_creatina1</h2>
-          <img src="../img/crea.png" alt="">
-          <p>COMPRAR</p>
-        </div>
+            <div class="card_proteina tarjeta">
+              <h2>producto_proteina4</h2>
+              <img src="../img/prote3.png" alt=""> 
+              <button>COMPRAR</button>
+            </div>
+              
+          <!------------Creatina----------->
+            <div class="card_creatina tarjeta">
+              <h2>producto_creatina1</h2>
+              <img src="../img/crea.png" alt="">
+              <button>COMPRAR</button>
+            </div>
 
-        <div>
-          <h2>producto_creatina2</h2
-            ><img src="../img/crea1.png" alt="">
-            <p>COMPRAR</p>
-        </div>
+            <div class="card_creatina tarjeta">
+              <h2>producto_creatina2</h2>
+              <img src="../img/crea1.png" alt="">
+              <button>COMPRAR</button>
+            </div>
 
-        <div>
-          <h2>producto_creatina3</h2>
-          <img src="../img/crea2.png" alt=""
-          ><p>COMPRAR</p>
-        </div>
-        
-        <div>
-          <h2>producto_creatina4</h2>
-          <img src="../img/crea3.png" alt="">
-          <p>COMPRAR</p>
-        </div>
-      </div>
+            <div class="card_creatina tarjeta">
+              <h2>producto_creatina3</h2>
+              <img src="../img/crea2.png" alt="">
+              <button>COMPRAR</button>
+            </div>
       
+            <div class="card_creatina tarjeta">
+              <h2>producto_creatina4</h2>
+              <img src="../img/crea3.png" alt="">
+              <button>COMPRAR</button>
+            </div>
 
-            <!-------BCAA------->
+          <!-------------BCAA--------------->
+            <div class="card_bcaa tarjeta">
+              <h2>producto_bcaa1</h2>
+              <img src="../img/bc.png" alt="">
+              <button>COMPRAR</button>
+            </div>
       
-      <div class="articulos_bcaa">
-        
-        <div>
-          <h2>producto_bcaa1</h2>
-          <img src="../img/bc.png" alt="">
-          <p>COMPRAR</p>
-        </div>
-        
-        <div>
-          <h2>producto_bcaa1</h2>
-          <img src="../img/bc1.png" alt="">
-          <p>COMPRAR</p>
-        </div>
-        
-        <div>
-          <h2>producto_bcaa1</h2>
-          <img src="../img/bc2.png" alt="">
-          <p>COMPRAR</p>
-        </div>
-        
-        <div>
-          <h2>producto_bcaa1</h2>
-          <img src="../img/bc3.png" alt="">
-          <p>COMPRAR</p>
-        </div>
-      </div>
-    </section>
-        
+            <div class="card_bcaa tarjeta">
+              <h2>producto_bcaa1</h2>
+              <img src="../img/bc1.png" alt="">
+              <button>COMPRAR</button>
+            </div>
+      
+            <div class="card_bcaa tarjeta">
+              <h2>producto_bcaa1</h2>
+              <img src="../img/bc2.png" alt="">
+              <button>COMPRAR</button>
+            </div>
+      
+            <div class="card_bcaa tarjeta">
+              <h2>producto_bcaa1</h2>
+              <img src="../img/bc3.png" alt="">
+              <button>COMPRAR</button>
+            </div>
+        </section>
+
+            </section>
+          </section>
+</main>
         
 
 

@@ -1,0 +1,137 @@
+#contenidosup{
+    margin-top: 3rem;
+}
+.TODO{
+    display: grid;
+    grid-template-areas:"sele dos" "sele dos";
+    grid-template-columns: 20% 80%;
+    grid-template-rows:auto 100vh ;
+    background-color: rgba(90, 184, 238, 0.118);
+    border: solid .2rem ;
+ 
+    #tarjetas   { 
+        grid-area: dos;
+        display: grid;  
+        grid-template-columns: repeat(4,1fr);
+        align-content: space-around;          
+        column-gap: 2rem;
+        row-gap: 4rem;
+        margin: auto;
+        margin-top: 5rem;        
+              
+        .tarjeta{   
+            @include flex-column;
+            background-color: white;
+            text-align: center;
+            h2{
+                font-size: $fuente-m;
+            }
+            button{
+                font-size: $fuente-s;
+                border: none;
+            }
+        }
+    }
+}
+       
+input[type=radio]{
+    display: none;
+}
+        
+.labels{
+    grid-area: sele;
+    border-right: solid .2rem ;
+    @include flex-column;
+    font-size: $fuente-m;
+    text-align: center;
+    row-gap: 2rem;
+    
+    label{
+    cursor: pointer;
+    color: aliceblue;
+    }
+    label:hover{
+        background-color: rgba(255, 255, 255, 0.441);
+    }
+    h2{
+        font-size: $fuente-m;
+        color: aliceblue;
+        background-color:  rgba(90, 184, 238, 0.183);  
+        padding: 1rem;
+        border-bottom: solid .2rem black;
+  }
+}
+            
+    
+
+    
+
+[value="pro"]:checked ~ #tarjetas > div:not(.card_proteina){
+        display: none;
+    }
+
+[value="crea"]:checked ~ #tarjetas > div:not(.card_creatina){
+        display: none;
+    }
+
+[value="bcaa"]:checked ~ #tarjetas > div:not(.card_bcaa){
+        display: none;
+    }
+
+
+@media screen and(max-width: 1550px){ 
+    .TODO{
+        #tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-items: center;
+            margin: 0rem;
+            margin-top: 1.5rem;
+            column-gap: 10rem;
+        }
+    }
+}
+
+@media screen and(max-width: 767px){ 
+    .TODO{
+        grid-template-columns: 30% 70%;
+        #tarjetas {
+            @include flex-column;
+            margin: 1.5rem;
+            div img{
+                width:calc( 25rem + 10rem);
+            }
+        }
+        .labels{
+            font-size: $fuente-s;
+        }
+        h2{
+            font-size: $fuente-s;
+        }
+    }
+}
+
+@media screen and(max-width: 560px){ 
+    .TODO{
+        #tarjetas {
+            
+            .tarjeta{   
+                background-color: white;
+                text-align: center;
+                h2{
+                    font-size: $fuente-s;
+                }
+                button{
+                    font-size: $fuente-xs;
+                }
+             }
+
+        .labels{
+            font-size: $fuente-xs;
+        }
+        h2{
+            font-size: $fuente-xs;
+        }
+        }
+    }
+}

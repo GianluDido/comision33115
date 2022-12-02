@@ -52,7 +52,7 @@
     }
 
 .sedes_actividad{
-    margin: auto;
+    @extend .texto_actividades;
     color: white;
     ul {
         @include flex-column;

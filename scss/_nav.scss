@@ -8,8 +8,9 @@
     grid-area: logo;
     width: 65%;
     margin: 0.5rem 0rem;
-    width:100px;
     justify-self: left !important;    
+    min-width: 150px;
+    margin-left: 1rem;
     }
 
 #lineas {
@@ -117,6 +118,7 @@
     #logo{
       grid-area: logo;
       justify-self: center !important;
+      max-width: 100px;
       }
     
     label {

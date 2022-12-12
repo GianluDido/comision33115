@@ -30,8 +30,9 @@ img {
   grid-area: logo;
   width: 65%;
   margin: 0.5rem 0rem;
-  width: 100px;
-  justify-self: left !important; }
+  justify-self: left !important;
+  min-width: 150px;
+  margin-left: 1rem; }
 
 #lineas {
   display: none;
@@ -101,7 +102,8 @@ img {
     grid-template-columns: repeat(2, auto); }
     #menu #logo, .nav #logo {
       grid-area: logo;
-      justify-self: center !important; }
+      justify-self: center !important;
+      max-width: 100px; }
     #menu label, .nav label {
       margin-right: 2rem;
       width: 4rem;

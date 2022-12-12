@@ -4,19 +4,24 @@
     grid-area: nav;
     }
 
-.logo {
+#logo {
     grid-area: logo;
     width: 65%;
     margin: 0.5rem 0rem;
     width:100px;
     justify-self: left !important;    
     }
+
+#lineas {
+  display: none;
+  grid-area: lineas;
+  }
     
 #menu {
     display: grid;
     grid-template-columns: .5fr 2fr 10fr;
     grid-template-areas: 
-    ". logo nav";   
+    "logo lineas nav";   
     border-bottom: solid #1cb056 0.1rem;
     background-color: #161616;
     justify-items: right;
@@ -77,7 +82,7 @@
      margin: 0.2rem .7rem;
     }
   }
-    .logo{
+    #logo{
      min-width:100px;
   }
 }
@@ -92,32 +97,44 @@
      margin: 0.2rem .7rem;
     }
   }
-    .logo{
+    #logo{
      min-width:100px;
   }
 
 }
 
 @media screen and (max-width: 767px) {
-    #menu, .nav {
-     @include flex-column;  
+  #menu, .nav {
      align-items: center;
      padding-bottom: 2rem;
+     display: grid;
+     grid-template-areas: 
+     "logo menu"
+     "ul  ul";
+     grid-template-columns: repeat(2, auto);
+     
+    
+    #logo{
+      grid-area: logo;
+      justify-self: center !important;
+      }
     
     label {
      margin-right: 2rem;
-     @include ancho-alto(12rem,7rem);
-     margin-bottom: 1rem;
+     @include ancho-alto(4rem,4rem);
     }
-    
+       
     ul li {
      padding: .4rem;
      margin: 0.2rem;
+     
     }
 
     ul {
      display: none;
      padding-bottom: 0;
+     grid-area: ul;
+     justify-self: center;
     }
 
     ul li a{
@@ -129,6 +146,13 @@
      @include flex-column; 
     }
   }
+  
+  #lineas{
+   display: block;
+   justify-self: center;
+   grid-area: menu;
+    }
+
   
 }
 /*                       ---------------------------                    */

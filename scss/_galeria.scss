@@ -7,32 +7,29 @@
     row-gap: 3rem;
     column-gap: 1rem;
     justify-items: center;
-
-
-}
-
-.footer_pages_hr{
-    border: solid 0.1rem black;
-    margin-top: 10rem;
-}
-
-.pages_hr {
-    border: solid 0.1rem black;
-    margin-bottom: 5rem;
+    
+    img{
+     @include ancho-alto(60rem, 40rem);
+    }
 }
 
 
 /*                      Media screen             GALERIA                  */
 @media screen and (max-width: 1024px) {
     .galeria_img{
-     @include ancho-alto(auto,auto);
+     @include ancho-alto (auto, auto);
      column-gap: 1rem;
      margin: 0rem 1rem;
+     
+     img{
+        @include ancho-alto(40rem, 28rem);
+       }
     }
 }
 @media screen and (max-width: 767px) {
     .galeria_img{
       @include flex-column;
+      @include center-items;
       margin: 0rem 1rem;
     }
 }
